@@ -1,0 +1,59 @@
+---
+title: Подарочные сертификаты
+outClass:
+headerInner: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+    <div class="section section--certificates section--paddingTopDefault">
+        <div class="container section__inner">
+            <div class="certificatesCards">
+                {% for item in ['500 Руб', '1 500 руб', '2 500 руб'] %}
+                    <div class="certificatesCards__item">
+                        <div class="certificatesCards__title">{{ item }}</div>
+                    </div>
+                {% endfor %}
+
+                <div class="certificatesDescription">
+                    <article>
+                        <h1>
+                            Подарочные сертификаты
+                        </h1>
+                        <p>
+                            В нашем магазине вы можете приобрести подарочные сертификаты на любую
+                            удобную для вас сумму, которая привязывается к номеру выданного
+                            сертификата и фиксируется нами в базе данных.
+                            Информация о сумме и номере сертификата дублируется вам на почту.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="certificatesForm">
+                    <form action="/" class="form form--certificateOffer">
+                        <div class="form__top">
+                            {% for item in ['500','1 000','2 000','5 000'] %}
+                                <div class="radioButtonPrice">
+                                    <input type="radio" class="radioButtonPrice__input"
+                                           name="radioButtonPrice">
+                                    <div class="radioButtonPrice__body">
+                                        <span class="price price--ruble">{{ item }}</span>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                            <input type="text" name="price" placeholder="или введите свою сумму" class="form__input">
+                        </div>
+                        <div class="form__bottom">
+                            <a href="#" class="btn btn--toCart">
+                                {{ mixins.icon('cart') }}
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+

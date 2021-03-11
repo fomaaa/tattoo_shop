@@ -1,0 +1,36 @@
+textarea,
+input {
+	border: 0;
+	border-radius: 0;
+	background-color: #fff;
+	font-family: inherit;
+}
+
+textarea {
+	resize: none;
+}
+
+
+.textarea,
+.input {
+
+}
+
+.input {
+	height: 30px;
+
+
+	&.input--sm {
+
+	}
+
+	&.input--xs {
+
+	}
+}
+
+.textarea {
+	width: 100%;
+	min-height: 100px;
+	padding-top: 10px;
+}

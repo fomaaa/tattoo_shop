@@ -1,0 +1,58 @@
+---
+title: Оплата
+outClass:
+headerInner: true
+---
+{% set breadcrumbs = [
+    {
+        src: '/page.html',
+        title: 'Главная'
+    },
+    {
+        title: ''
+    }
+] %}
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+    <div class="section section--staticBlock section--paddingTopDefault">
+        <div class="container section__inner">
+            <div class="staticBlock">
+                <div class="page__title">
+                    <h1>{{ title }}</h1>
+                </div>
+                <article>
+                    <h3>Оплата при самовывозе из магазина</h3>
+                    <ul>
+                        <li>
+                            Наличными средставми
+                        </li>
+                        <li>
+                            Оплата онлайн (Сбербанк, Тинькофф)
+                        </li>
+                        <li>
+                            Оплата через банкомат или платежный терминал
+                        </li>
+                    </ul>
+                    <h3>
+                        Оплата при доставке
+                    </h3>
+                    <ul>
+                        <li>Оплата курьеру наличными средствами</li>
+                        <li>Оплата онлайн (Сбербанк, Тинькофф)</li>
+                    </ul>
+                    <h3>
+                        Оплата при доставке по РФ
+                    </h3>
+                    <ul>
+                        <li>Предоплата онлайн (Сбербанк, Тинькофф)</li>
+                        <li>Оплата наличными средствами или картой в вашем отделении Почты России
+                        </li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

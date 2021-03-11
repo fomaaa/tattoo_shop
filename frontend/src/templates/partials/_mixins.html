@@ -1,0 +1,276 @@
+{% macro icon(i) %}
+    <svg class="icon icon-{{ i }}">
+        <use xlink:href="img/sprite.svg#icon-{{ i }}"></use>
+    </svg>
+{% endmacro %}
+
+{% macro link_button(title, type, href="#") %}
+    <a href="{{ href }}" class="btn btn--{{ type }}">
+        {{ title }}
+    </a>
+{% endmacro %}
+
+{% macro form_button(title, type) %}
+    <div class="form__button">
+        <button type="button" class="btn btn--{{ type }}">
+            {{ title }}
+        </button>
+    </div>
+{% endmacro %}
+
+{% macro field_radio(name, text, class, value, textBottom, priceBottom, checked) %}
+    <div class="radioButton">
+        <input type="radio" name="{{ name }}"
+               {% if checked %}checked{% endif %}
+                {% if class %}class="{{ class }}"{% endif %} {% if value %}value="{{ value }}"{% endif %}>
+        <div class="radioButton__body">
+            <span>{{ text }}</span>
+
+            {% if textBottom %}
+                <div class="textBottom">
+                    <b>{{ textBottom }}</b>
+                </div>
+            {% endif %}
+
+            {% if priceBottom %}
+                <div class="textBottom">
+                    <span class="price price--ruble">{{ priceBottom }}</span>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+{% endmacro %}
+
+{% macro field_radio_box(name, title, questionBtn, class, index) %}
+    <div class="radioButton radioButton--box {{ class }}">
+        <input type="radio" name="{{ name }}">
+        <div class="radioButton__body">
+            <div class="radioButton__title">
+                {{ title }}
+
+                {% if questionBtn %}
+                    <a href="http://www.mocky.io/v2/5bd98fac2f00008c0006d1d1"
+                       class="btn btn-question" data-src="#question{{ index }}" data-fancybox>
+                        {{ icon('question') }}
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endmacro %}
+
+{% macro field_input(name, type='text', class='', placeholder,dataType) %}
+    <input type="{{ type }}" class="input {{ class }}"
+           {% if dataType %}data-type="{{ dataType }}"{% endif %}
+           {% if name %}name="{{ name }}"{% endif %} {% if placeholder %}placeholder="{{ placeholder }}"{% endif %} />
+{% endmacro %}
+
+{% macro field_checkbox(label, name="name", checked, center) %}
+    <div class="checkboxButton{% if center %} checkboxButton--center{% endif %}">
+
+        <input type="checkbox" name="{{ name }}" {% if checked %}checked{% endif %}>
+        <label>
+            <span>{{ label }}</span>
+        </label>
+    </div>
+{% endmacro %}
+
+{% macro field_select(name, options, noSelectric="false", class, dataAttrs) %}
+    <select name="{{ name }}"
+            {% if dataAttrs %}{{ dataAttrs }}{% endif %}
+            class="{% if noSelectric === "false" %}js-select{% endif %} {{ class }}">
+        {% for item in options %}
+            {% if item.value %}
+                <option value="{{ item.value }}">{{ item.title }}</option>
+            {% else %}
+                <option value="{{ item }}">{{ item }}</option>
+            {% endif %}
+        {% endfor %}
+    </select>
+{% endmacro %}
+
+{% macro form_field(label, class, name, placeholder, linkTop, required, dataType) %}
+    <div class="form__field{% if required %} is-required{% endif %}">
+        {% if label %}
+            <label class="label">
+                <span class="label__title">{{ label }}</span>
+
+                {% if linkTop %}
+                    <a href="#" class="btn btn--link btn--xs">Напомнить пароль</a>
+                {% endif %}
+            </label>
+        {% endif %}
+        {{ field_input(class=class, name=name, placeholder=placeholder, dataType=dataType) }}
+    </div>
+{% endmacro %}
+
+{% macro form_textarea(label, class, name) %}
+    <div class="form__field">
+        <label class="label">{{ label }}</label>
+        <textarea name="message" class="textarea"></textarea>
+    </div>
+{% endmacro %}
+
+{% macro form_select(label, options, noSelectric="false", name, class, dataAttrs) %}
+    <div class="form__field">
+        {% if label %}
+            <label class="label">{{ label }}</label>
+        {% endif %}
+        {{ field_select(options=options, noSelectric=noSelectric, name=name, class=class, dataAttrs=dataAttrs) }}
+    </div>
+{% endmacro %}
+
+{% macro form_checkbox(label, name="name", checked, center, class) %}
+    <div class="form__field {{ class }}">
+        {{ field_checkbox(label=label, name=name, checked=checked, center=center) }}
+    </div>
+{% endmacro %}
+
+{% macro sliderBtn(type="", iconBtn) %}
+    <div class="swiper-button swiper-button-{{ type }}">
+        {% if icon %}
+            {{ icon(iconBtn) }}
+        {% endif %}
+    </div>
+{% endmacro %}
+
+{% macro rating_stars(title, value="", class="", hits) %}
+    <div class="rating {{ class }}" {% if value %}data-rating="{{ value }}"{% endif %}>
+        {% if title %}
+            <div class="rating__title">{{ title }}</div>
+        {% endif %}
+        <div class="rating__stars">
+
+            {% if hits %}
+                <span class="color-red">��� ������</span>
+            {% endif %}
+        </div>
+    </div>
+{% endmacro %}
+
+{% macro priceBox(sale, salePrice, price="", pricePrefix="���. / ����") %}
+    <div class="priceBox{% if sale %} priceBox--sale{% endif %}">
+        {% if sale %}
+            <div class="priceBox__offer">
+                <div class="priceBox__old">{{ salePrice }}</div>
+                <div class="priceBox__sale" data-sale="{{ sale }}">
+                    <span>����. ����</span>
+                </div>
+            </div>
+        {% endif %}
+        <div class="priceBox__current">
+            <span>{{ price }}</span> {{ pricePrefix }}
+        </div>
+    </div>
+{% endmacro %}
+
+{% macro cardGood(title, photo, photo2x, price) %}
+    <div class="card card--good">
+        <a href="#" class="card__photo">
+            <img src="{{ photo }}" srcset="{{ photo2x }}" alt="ALT DESCRIPTION">
+        </a>
+        <div class="card__body">
+            <a href="#" class="card__title">
+                {{ title }}
+            </a>
+            <div class="card__bottom">
+                <div class="card__price">
+                    <span class="price price--ruble">4 500</span>
+                </div>
+
+                <div class="card__buttons">
+                    <a href="http://www.mocky.io/v2/5d153ad32f00005200c4f6ad" class="btn btn--favorite js-favorite-add-item">
+                        {{ icon('heart') }}
+                    </a>
+
+                    <form class="form form--addGood"
+                          action="http://www.mocky.io/v2/5d1535b32f00004da5c4f699"
+                          method="post">
+                        <button type="submit"
+                                class="btn btn--toCart js-cart-add-item">
+                            {{ icon('cart') }}
+                            {#                            {{ icon('checked') }}#}
+                        </button>
+                        <input type="hidden" name="product_id" value="2986"
+                               class="js-good-value-target">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endmacro %}
+
+{% macro cardCategory(title, categories, photo) %}
+    <div class="card card--category">
+        <a href="#" class="card__title">{{ title }}</a>
+        <ul class="card__subCategories">
+            {% for item in categories %}
+                <li>
+                    <a href="#">{{ item }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+        <div class="card__photo">
+            <img src="img/catalog_preview/{{ photo }}.png"
+                 srcset="img/catalog_preview/{{ photo }}@2x.png 2x" alt="catalog item">
+        </div>
+    </div>
+{% endmacro %}
+
+{% macro cardBlog(title, photo) %}
+    <div class="card card--blog">
+        <a href="#" class="card__link"></a>
+        <div class="card__bg" style="background-image: url({{ photo }});"></div>
+        <div class="card__title">{{ title }}</div>
+    </div>
+{% endmacro %}
+
+{% macro cartGoodMini(title) %}
+    <div class="card card--goodMini">
+        <a href="#" class="card__link"></a>
+        <div class="card__left">
+            <div class="card__photo" style="background-image: url(img/carousel/good_item1.jpg);"></div>
+            <div class="card__quantity">
+                <div class="quantity">
+                    <div class="quantity__control quantity__control--minus minus">
+                        {{ icon('minus') }}
+                    </div>
+                    <input type="text" class="quantity__value" value="1"/>
+                    <div class="quantity__control quantity__control--plus plus">
+                        {{ icon('plus') }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card__right">
+            <div class="card__title">{{ title }}</div>
+            <div class="card__price">
+                <span class="price price--ruble">2 500</span>
+            </div>
+
+            <a href="http://www.mocky.io/v2/5d153e582f00004da5c4f6b7" class="card__remove">
+                {{ icon('close') }}
+            </a>
+        </div>
+    </div>
+{% endmacro %}
+
+{% macro cardArticle(title, img, class) %}
+    <div class="card card--article {{ class }}">
+        <a href="#" class="card__link" target="_blank"></a>
+        <div class="card__photo" style="background-image: url({{ img }});"></div>
+        <div class="card__body">
+            <div class="card__date">25.02.2019</div>
+            <div class="card__title">{{ title }}</div>
+            <div class="card__description">
+                Подходящий, инновационный,
+                а главное качественный блок
+                питания — это залог успешной
+                работы мастера и его машинки.
+            </div>
+        </div>
+    </div>
+
+{% endmacro %}
+
+

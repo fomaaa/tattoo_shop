@@ -1,0 +1,41 @@
+<div class="section section--banner">
+    <div class="containerFluid section__inner">
+        <div class="section__left">
+            <nav class="nav nav--catalog">
+                <ul class="menu">
+                    {% for item in ['машинки','краски','картриджи','иглы'] %}
+                        <li class="menu__item">
+                            <a href="#">{{ item }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+                <ul class="menu">
+                    {% for item in ['Держатели','Наконечники','Блоки питания','Расходные материалы','Аксессуары','Защита и уход','перманентный макияж','пирсинг'] %}
+                        <li class="menu__item">
+                            <a href="#">{{ item }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </nav>
+        </div>
+        <div class="section__right">
+
+            <div class="bannerSlider">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        {% for item in range(0,2) %}
+                            <div class="swiper-slide">
+                                <div class="bannerSliderItem" style="background-image: url('img/banner/item_{{ loop.index }}.jpg');">
+                                    <a href="#" class="bannerSliderItem__link"></a>
+                                    <div class="bannerSliderItem__title">mustang tattoo</div>
+                                    <div class="bannerSliderItem__subtitle">Действительно профессионально</div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

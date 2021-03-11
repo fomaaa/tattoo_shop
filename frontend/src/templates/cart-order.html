@@ -1,0 +1,83 @@
+---
+title: Оформление заказа
+outClass:
+headerInner: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+    <div class="section section--cart section--paddingTopDefault">
+        <div class="containerFluid section__inner">
+            <div class="page__title">оформление заказа</div>
+            <div class="cart">
+                <div class="cart__center">
+                    <div class="orderForm">
+                        <form action="/" class="form form--order">
+                            <div class="form__inner">
+                                <div class="form__groupWrapper">
+                                    <div class="form__title">
+                                        получение
+                                    </div>
+                                    <div class="form__grid form__grid--3">
+                                        {{ mixins.field_radio(name='delivery', text="курьерская доставка по москве", priceBottom="300", checked="true") }}
+                                        {{ mixins.field_radio(name='delivery', text="самовывоз из магазина в москве", textBottom="бесплатно") }}
+                                        {{ mixins.field_radio(name='delivery', text="доставка по россии", priceBottom="от 300") }}
+                                    </div>
+                                </div>
+                                <div class="form__row">
+                                    <div class="form__groupWrapper">
+                                        <div class="form__title">контакты</div>
+                                        <div class="form__group">
+                                            {{ mixins.form_field(label="email", required="true") }}
+                                            {{ mixins.form_field(label="Имя", required="true") }}
+                                            {{ mixins.form_field(label="Фамилия", required="true") }}
+                                            {{ mixins.form_field(label="Телефон", required="true") }}
+                                        </div>
+                                    </div>
+                                    <div class="form__groupWrapper">
+                                        <div class="form__title">адрес</div>
+                                        <div class="form__group js-dadata-container">
+                                            {{ mixins.form_field(label="страна", required="true",class="js-dadata", dataType="country") }}
+                                            {{ mixins.form_field(label="Город", required="true",class="js-dadata", dataType="city-settlement") }}
+                                            {{ mixins.form_field(label="адрес", required="true",class="js-dadata", dataType="address") }}
+                                            {{ mixins.form_field(label="индекс", required="true",class="js-dadata", dataType="postal-code") }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form__groupWrapper">
+                                    <div class="form__title">
+                                        оплата
+                                    </div>
+                                    <div class="form__grid form__grid--2">
+                                        {{ mixins.field_radio(name='payment', text="при получении", checked="true") }}
+                                        {{ mixins.field_radio(name='payment', text="онлайн") }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__bottom">
+                                <div class="form__rules">
+                                    <p>
+                                        Нажимая на кнопку "Оформить заказ", Вы соглашаетесь с
+                                        публичной офертой и даете согласие на обработку персональных
+                                        данных.
+                                    </p>
+                                </div>
+
+                                <div class="form__button">
+                                    <button class="btn btn--primary btn--lg" type="submit">оформить
+                                        заказ
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="cart__right">
+                    {% include 'blocks/_cartBox.html' %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

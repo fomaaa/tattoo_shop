@@ -1,0 +1,57 @@
+.quantity {
+	display: flex;
+	align-items: center;
+	position: relative;
+
+	svg {
+		width: 16px;
+		height: 16px;
+		fill: #000;
+	}
+
+	&__control {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		z-index: 2;
+
+		&--minus {
+			left: 0;
+		}
+
+		&--plus {
+			right: 0;
+		}
+	}
+
+	&__value {
+		text-align: center;
+		width: 100%;
+		background-color: transparent;
+	}
+}
+
+.quantity.quantity--lg {
+	width: 237px;
+	margin: 0 auto;
+	border-bottom: 1px solid rgba(#000, .1);
+
+	.quantity__value {
+		height: 61px;
+	}
+
+	.quantity__control {
+		top: 50%;
+		transform: translateY(-50%);
+		margin-top: 0;
+	}
+
+	svg {
+		width: 21px;
+		height: 21px;
+	}
+}

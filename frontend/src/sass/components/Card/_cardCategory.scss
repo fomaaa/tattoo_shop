@@ -1,0 +1,36 @@
+.card--category {
+	background-color: #f4f4f4;
+	text-align: center;
+	padding: 23px 13px 0;
+	overflow: hidden;
+
+	.card__title {
+		font-family: $font-secondary;
+		font-size: 30px;
+		line-height: 39px;
+		text-transform: uppercase;
+		min-height: 76px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.card__subCategories {
+		display: flex;
+		flex-flow: wrap;
+		justify-content: center;
+		margin: 10px -21px 0;
+
+		li {
+			margin: 0 21px;
+		}
+
+		a {
+			text-transform: uppercase;
+		}
+	}
+
+	.card__photo {
+		margin-top: 45px;
+	}
+}

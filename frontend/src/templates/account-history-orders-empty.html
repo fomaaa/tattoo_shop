@@ -1,0 +1,75 @@
+---
+title: история заказов
+outClass:
+headerInner: true
+---
+{% set breadcrumbs = [
+    {
+        src: '/page.html',
+        title: 'Главная'
+    },
+    {
+        title: ''
+    }
+] %}
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+    <div class="section section--account section--paddingTopDefault">
+        <div class="containerFluid section__inner">
+            <div class="page__title">личный кабинет</div>
+            <div class="page__subtitle">история заказов</div>
+            <div class="account">
+                <div class="account__left">
+                    <nav class="nav nav--page">
+                        <ul class="menu">
+                            {% for item in ['изменить регистрационные данные','изменить пароль'] %}
+                                <li class="menu__item">
+                                    <a href="#">{{ item }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                        <ul class="menu">
+                            {% for item in ['история заказов','запросы на возврат','история транзакций','периодические платежи'] %}
+                                <li class="menu__item{% if loop.index === 1 %} is-active{% endif %}">
+                                    <a href="#">{{ item }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                        <ul class="menu">
+                            {% for item in ['файлы для скачивания','управление подпиской'] %}
+                                <li class="menu__item">
+                                    <a href="#">{{ item }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </nav>
+                </div>
+                <div class="account__right">
+                    <div class="completed completed--empty">
+                        <div class="completed__inner">
+                            <div class="completed__icon">
+                                <img src="img/completed.svg" alt="" />
+                            </div>
+                            <div class="completed__title page__title">
+                                К сожалению, ваша
+                                история пуста
+                            </div>
+                            <div class="completed__subtitle">
+                                Посмотрите товары в <a href="/catalog-category.html">каталоге</a> или воспользуйтесь <a href="/search.html">поиском</a>
+                            </div>
+
+                            <div class="completed__bottom">
+                                <a href="#" class="btn btn--primary btn--lg">
+                                    <span>перейти в каталог</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

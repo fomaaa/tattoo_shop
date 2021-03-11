@@ -1,0 +1,63 @@
+.section--certificateOffer {
+	margin: 39px 0;
+}
+
+.certificateOffer {
+	max-width: 680px;
+	margin: 0 auto;
+	border-radius: 10px;
+	background-color: rgb(255, 255, 255);
+	box-shadow: 0px 2px 12.45px 2.55px rgba(0, 0, 0, 0.1);
+	padding: 32px 32px 30px;
+
+	&__title {
+		text-align: center;
+		font-size: 30px;
+		line-height: 39px;
+		font-family: $font-secondary;
+		text-transform: uppercase;
+		letter-spacing: 0;
+	}
+
+	&__subtitle {
+		text-align: center;
+		text-transform: uppercase;
+		margin-top: 11px;
+	}
+
+	&__body {
+		margin-top: 31px;
+	}
+}
+
+.form--certificateOffer {
+
+	.form__top {
+		border-bottom: 1px solid #000;
+		padding-bottom: 9px;
+		display: flex;
+		align-items: center;
+
+		.radioButtonPrice:not(:first-child) {
+			margin-left: 10px;
+		}
+	}
+
+	.form__input {
+		letter-spacing: 0.1em;
+		width: 216px;
+		margin-left: auto;
+
+		&::placeholder {
+			text-align: right;
+			text-transform: uppercase;
+			color: $primary-color;
+		}
+	}
+
+	.form__bottom {
+		margin-top: 27px;
+		text-align: center;
+	}
+}
+

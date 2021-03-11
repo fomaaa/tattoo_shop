@@ -1,0 +1,54 @@
+@import "typography";
+
+.i-content,
+.containerFluid,
+.containerFluidXs,
+.container {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 10px;
+	position: relative;
+}
+
+.containerFluid {
+	max-width: 1340px;
+	padding: 0 22px;
+}
+
+.container {
+	max-width: 844px + 20px;
+}
+
+.container2 {
+	max-width: 776px;
+	margin: 0 auto;
+	position: relative;
+	width: 100%;
+}
+
+.containerMd {
+	width: $column-lg2;
+	margin: 0 auto;
+}
+
+.i-content {
+	max-width: 1296px + 20px;
+	margin: 0 auto;
+}
+
+.hiddenMobile {
+	@include r($mob) {
+		display: none;
+	}
+}
+
+.hiddenDesktop {
+
+	@include rmin($mob) {
+		display: none;
+	}
+}
+
+.hidden {
+	display: none;
+}

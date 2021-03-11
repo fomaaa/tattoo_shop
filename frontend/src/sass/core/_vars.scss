@@ -1,0 +1,108 @@
+// Colors
+$primary-color: #ff3b30;
+
+$green: #4cd964;
+
+$black: #111111;
+$black-lighten: #2a2a2a;
+$black-light: #f6f6f6;
+
+$white: #fff;
+$white-darken: #f8f8f8;
+$white-dark: #f2f2f2;
+
+$text-color: $black;
+
+// Box shadow
+$box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.05);
+
+// Border radius
+$border-radius: 40px;
+
+// Transition
+$easing: cubic-bezier(0.58, 0.01, 0.41, 1);
+$transition: all 0.3s ease-in-out;
+$transition-easing: all 0.3s $easing;
+
+// Text shadow
+$text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
+
+// Breakpoints
+$xlg-breakpoint: 1600;
+$lg-breakpoint: 1250;
+$md-breakpoint: 1025;
+$sm-breakpoint: 900;
+$xs-breakpoint: 767;
+
+$mob: $xs-breakpoint;
+
+$breakpoints: (
+		large : $xlg-breakpoint + 'px',
+		medium: $md-breakpoint + 'px',
+		small : $xs-breakpoint + 'px'
+);
+
+
+//typography
+$font-path: '../fonts/';
+$font-main: 'RobotoMono', sans-serif;
+$font-secondary: 'RubikMonoOne', sans-serif;
+$font-third: 'Rubik', sans-serif;
+
+$h1-font-sizes: (
+		null : (30px, 45px),
+		medium: (40px, 50px),
+		small : (30px, 40px),
+);
+
+$h2-font-sizes: (
+		null : (21px, 35px),
+		medium: (36px, 45px),
+		small : (30px, 40px),
+);
+
+$h3-font-sizes: (
+		null : (14px, 21px),
+		medium: (30px, 40px),
+		small : (24px, 35px),
+);
+
+$h4-font-sizes: (
+		null : (30px, 40px),
+		medium: (24px, 35px),
+		small : (20px, 30px),
+);
+
+$h5-font-sizes: (
+		null : (20px, 30px),
+		medium: (18px, 25px),
+		small : (16px, 25px),
+);
+
+$h6-font-sizes: (
+		null : (20px, 30px),
+		medium: (18px, 25px),
+		small : (16px, 25px),
+);
+
+$text-font-sizes: (
+		null : (14px, 28px),
+		medium: (14px, 25px),
+		small : (14px, 20px),
+);
+
+$f-black: 900;
+$f-extraBold: 800;
+$f-bold: 700;
+$f-semiBold: 600;
+$f-medium: 500;
+$f-regular: 400;
+$f-light: 300;
+
+
+$column-sm: percentage(266/1396);
+$column-md: percentage(776/1396);
+$column-lg: percentage(1087/1396);
+$column-lg2: percentage(1120/1396);
+$column-padding: 22px;
+$row-padding: -22px;

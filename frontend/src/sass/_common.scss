@@ -1,0 +1,51 @@
+html {
+	font-family: $font-main;
+	@include font-size($text-font-sizes);
+	font-weight: $f-medium;
+	-webkit-tap-highlight-color: transparent;
+	@include font-smoothing();
+	color: $text-color;
+
+	letter-spacing: 0.1em;
+}
+
+* {
+	outline: none;
+	box-sizing: border-box;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	transition: .25s all;
+	text-decoration: none;
+	color: $black;
+
+	&:hover {
+		color: $primary-color;
+	}
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+}
+
+input:focus {
+	outline: none;
+}
+
+::selection {
+	color: $white;
+	background-color: $primary-color;
+}
+
+::-moz-selection {
+	color: $white;
+	background-color: $primary-color;
+}

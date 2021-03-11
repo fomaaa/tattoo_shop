@@ -1,0 +1,75 @@
+.card--goodMini {
+	padding: 10px 10px 5px 110px;
+	position: relative;
+
+	&:hover {
+		background-color: #f5f5f5;
+
+		.card__remove {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	.card__photo {
+		@include cover();
+		height: 52px;
+	}
+
+	.card__left {
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		width: 90px;
+
+		.card__quantity {
+			margin-top: 5px;
+			position: relative;
+			z-index: 4;
+		}
+	}
+
+	.card__right {
+		min-height: 75px;
+	}
+
+	.card__title {
+		text-transform: initial;
+		letter-spacing: 0;
+		line-height: 21px;
+	}
+
+	.card__price {
+		margin-top: 5px;
+
+		.price {
+			font-family: $font-third;
+		}
+	}
+
+	.card__remove {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 35px;
+		height: 35px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		z-index: 5;
+		opacity: 0;
+		visibility: hidden;
+		transition: .3s all;
+
+		&:hover svg {
+			fill: $primary-color;
+		}
+
+		svg {
+			width: 13px;
+			height: 13px;
+			fill: #c9c9c9;
+			transition: .3s all;
+		}
+	}
+}

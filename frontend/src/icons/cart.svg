@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="18px" viewBox="0 0 24 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>cart</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="cart" fill="#000000" fill-rule="nonzero">
+            <path d="M10,16.5 C10,17.329 9.328,18 8.5,18 C7.672,18 7,17.329 7,16.5 C7,15.672 7.672,15 8.5,15 C9.328,15 10,15.672 10,16.5 Z M13.5,15 C12.672,15 12,15.671 12,16.5 C12,17.329 12.672,18 13.5,18 C14.328,18 15,17.329 15,16.5 C15,15.672 14.328,15 13.5,15 Z M19.804,0 L16.373,12 L14.271,12 L16.813,3 L3.55271368e-15,3 L4.615,14 L17.854,14 L21.328,2 L23.257,2 L24,0 L19.804,0 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

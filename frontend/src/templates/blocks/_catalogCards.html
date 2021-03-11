@@ -1,0 +1,71 @@
+{% set cards = [
+    {
+        title: 'краски',
+        photo: 'kraski',
+        categories: ['dynamic',  'eternal', 'intenze',  'краска','nocturnal',  'world famous']
+    },
+    {
+        title: 'машинки',
+        photo: 'mashinki',
+        categories: ['Индукционные',   'Роторные',  'Запчасти']
+    },
+    {
+        title: 'энергия',
+        photo: 'energy',
+        categories: ['блоки питания',   'клип-корды',   'педали']
+    },
+    {
+        title: 'Иглы',
+        photo: 'igly',
+        categories: ['RL',   'RS',   'RM',   'Magnum']
+    },
+    {
+        title: 'Наконечники',
+        photo: 'nakonech',
+        categories: ['Стальные', 'Одноразовые']
+    },
+    {
+        title: 'Картриджи',
+        photo: 'katridgi',
+        categories: ['Spark', 'White Bone']
+    },
+    {
+        title: 'держатели',
+        photo: 'derjateli',
+        categories: ['стальные',   'алюминиевые',   'трубки','держатели для картриджей',  'насадки']
+    },
+    {
+        title: 'расходные материалы',
+        photo: 'rashodmat',
+        categories: ['перевод изображения', 'колпачки','резинки']
+    },
+    {
+        title: 'защита и уход',
+        photo: 'jashita',
+        categories: ['барьерная защита','Перчатки, пакеты','Обезболивающие средства','уход','Дезинфекция и профилактика']
+    },
+    {
+        title: 'аксессуары',
+        photo: 'aksesuari'
+    },
+    {
+        title: 'тату наборы',
+        photo: 'nabori'
+    },
+    {
+        title: 'перманентный макияж',
+        photo: 'permanent'
+    }
+] %}
+
+<div class="section section--catalogCards">
+    <div class="containerFluidXs section__inner">
+        <div class="catalogCards">
+            {% for item in cards %}
+                <div class="catalogCards__item">
+                    {{ mixins.cardCategory(title=item.title, categories=item.categories, photo=item.photo) }}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

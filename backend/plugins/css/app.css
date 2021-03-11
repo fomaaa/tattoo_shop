@@ -1,0 +1,29 @@
+#redactor-modal #redactor-modal-addSlider {
+}
+
+
+.redactor-editor .sliderBox {
+	margin: 50px 0;
+	pointer-events: none;
+}
+
+.redactor-editor .sliderBox > div {
+	margin-bottom: 0;
+}
+
+.redactor-editor .sliderBox .swiper-wrapper {
+	display: flex;
+	flex-flow: wrap;
+}
+
+.redactor-editor .sliderBox .swiper-slide:not(:first-child) {
+	margin-left: -90px;
+}
+
+
+.redactor-editor .sliderBox .sliderBoxImage {
+	width: 100px;
+	height: 100px;
+	background-size: cover;
+	background-position: center center;
+}

@@ -1,0 +1,36 @@
+.section--auth {
+	padding-bottom: 90px;
+
+	.auth {
+		max-width: 424px;
+		margin: 10px auto 0;
+	}
+}
+
+.authLinks {
+	display: flex;
+	flex-flow: wrap;
+	justify-content: center;
+
+	.authLinks__item {
+		margin: 0 15px;
+	}
+
+
+	a {
+		text-transform: uppercase;
+		font-family: $font-secondary;
+		padding-bottom: 11px;
+		display: block;
+
+		&.is-active {
+			border-bottom: 3px solid #000;
+		}
+	}
+}
+
+.auth__body {
+	background-color: #f5f5f5;
+	border-radius: 20px;
+	padding: 20px;
+}

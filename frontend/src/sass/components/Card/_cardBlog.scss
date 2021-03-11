@@ -1,0 +1,19 @@
+.card--blog {
+	height: 539px;
+	padding: 20px 15px 20px 20px;
+
+
+	.card__bg {
+		@include cover();
+		@include coverdiv();
+	}
+
+	.card__title {
+		position: relative;
+		color: #fff;
+		font-size: 45px;
+		line-height: 60px;
+		font-weight: 700;
+		letter-spacing: 0;
+	}
+}

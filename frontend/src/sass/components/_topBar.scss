@@ -1,0 +1,67 @@
+.topBar {
+	background-color: #222222;
+	color: #fff;
+	padding: 9px 0;
+
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__right,
+	&__left {
+		width: $column-sm;
+	}
+
+	&__center {
+		width: $column-md;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__right {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+
+		.btn--logout {
+			margin-left: 15px;
+			vertical-align: middle;
+		}
+	}
+}
+
+
+.topBar__phone a {
+	color: #fff;
+
+	&:hover {
+		color: $primary-color;
+	}
+}
+
+.topBar__links {
+	display: flex;
+	align-items: center;
+	margin: 0 -14px;
+
+	li {
+		margin: 0 14px;
+	}
+
+	a {
+		text-transform: uppercase;
+		color: #fff;
+
+		&:hover {
+			color: $primary-color;
+		}
+	}
+}
+
+
+.topBar__timeTable {
+	text-transform: uppercase;
+}

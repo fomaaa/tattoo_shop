@@ -1,0 +1,44 @@
+.filterGridNav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-bottom: 1px solid rgba(#000, .1);
+	margin-bottom: 40px;
+
+	.filterGridNav__item {
+		margin: 0 15px;
+	}
+
+	a {
+		font-size: 14px;
+		font-family: $font-secondary;
+		border-bottom: 3px solid transparent;
+		display: block;
+		padding-bottom: 10px;
+
+		&.is-active {
+			border-color: #000;
+			pointer-events: none;
+		}
+
+		&.is-disabled {
+			pointer-events: none;
+			opacity: .4;
+		}
+
+		.value {
+			font-family: $font-main;
+		}
+	}
+}
+
+.filterGridBody {
+	display: flex;
+	flex-flow: wrap;
+	margin:-10px;
+
+	.filterGridBody__item {
+		width: 20%;
+		padding: 10px;
+	}
+}

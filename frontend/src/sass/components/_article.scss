@@ -1,0 +1,189 @@
+h1, h2, h3, h4 {
+	letter-spacing: 0;
+	margin: 0;
+}
+
+h1 {
+	@include font-size($h1-font-sizes);
+	text-transform: uppercase;
+	font-family: $font-secondary;
+}
+
+h2 {
+	@include font-size($h2-font-sizes);
+	text-transform: uppercase;
+	font-family: $font-secondary;
+}
+
+h3 {
+	@include font-size($h3-font-sizes);
+	text-transform: uppercase;
+	font-family: $font-secondary;
+}
+
+h4 {
+	@include font-size($h4-font-sizes);
+}
+
+h5 {
+	@include font-size($h5-font-sizes);
+	text-transform: uppercase;
+}
+
+h6 {
+	@include font-size($h6-font-sizes);
+}
+
+p {
+	@include font-size($text-font-sizes);
+	margin: 0;
+}
+
+
+article {
+	letter-spacing: 0;
+	font-size: 16px;
+	line-height: 24px;
+
+	h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote {
+		max-width: 815px;
+		margin: 0 auto;
+	}
+
+	p.imageContainer {
+		max-width: 100%;
+		margin: 52px 0 54px;
+	}
+
+	p {
+		font-size: 16px;
+		line-height: 24px;
+		margin-top: 25px;
+		margin-bottom: 25px;
+	}
+
+	h1 {
+		text-align: center;
+	}
+
+	h2 {
+		margin-top: 43px;
+
+		+ p {
+			margin-top: 5px;
+		}
+	}
+
+	h3 {
+
+		&:not(:first-child) {
+			margin-top: 63px;
+		}
+	}
+
+	.date {
+		color: #a2a2a2;
+		text-align: center;
+		margin: 8px 0;
+	}
+
+	blockquote {
+		margin-top: 45px;
+
+		p {
+			font-weight: 700;
+			font-size: 21px;
+			line-height: 30px;
+			max-width: 565px;
+			margin: 0;
+		}
+	}
+
+	ul {
+		margin-top: 27px;
+
+		li {
+			position: relative;
+			padding-left: 18px;
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 10px;
+				left: 0;
+				width: 6px;
+				height: 6px;
+				border-radius: 100%;
+				background-color: #000;
+			}
+
+			&:not(:first-child) {
+				margin-top: 13px;
+			}
+
+			p {
+				margin: 0;
+			}
+		}
+	}
+
+	.sliderBox {
+		margin: 54px auto 30px;
+	}
+
+	.buttonContainer {
+		text-align: center;
+		margin: 33px auto;
+	}
+}
+
+
+.section--article {
+	padding: 7px 0;
+
+	.shareBox {
+		margin: 40px 0 24px;
+	}
+}
+
+.sliderBox {
+	@extend .container;
+
+	&__thumbs {
+		position: relative;
+		margin-top: 5px;
+
+		.swiper-container {
+			padding: 10px 0;
+		}
+
+		.swiper-button {
+			top: 0;
+			margin-top: 15px;
+		}
+
+		.swiper-slide {
+			width: 70px;
+			padding: 5px;
+			border-radius: 100%;
+			overflow: hidden;
+
+			&.swiper-slide-active {
+				background-color: #fff;
+				box-shadow: 0px 2px 8.3px 1.7px rgba(0, 0, 0, 0.16);
+			}
+
+			img {
+				width: 60px;
+				height: 60px;
+				object-fit: cover;
+				border-radius: 100%;
+				overflow: hidden;
+			}
+		}
+	}
+}
+
+b {
+	font-family: $font-secondary;
+}

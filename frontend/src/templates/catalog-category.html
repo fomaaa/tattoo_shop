@@ -1,0 +1,95 @@
+---
+title: Каталог
+outClass:
+headerInner: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+    <div class="section section--catalog">
+        <div class="containerFluid section__inner">
+
+            <div class="catalog">
+                <div class="catalog__left">
+                    <nav class="nav nav--catalog" id="catalogNav">
+                        <ul class="menu">
+                            {% for item in ['машинки','краски','картриджи','иглы'] %}
+                                <li class="menu__item{% if loop.index === 1 %} is-active{% endif %}">
+                                    <a href="#">{{ item }}</a>
+                                    {% if loop.index === 1 %}
+                                        <ul class="subMenu">
+                                            {% for item in ['Индукционные','Роторные','Запчасти для машинок'] %}
+                                                <li class="subMenu__item">
+                                                    <a href="#">{{ item }}</a>
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                    {% endif %}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                        <ul class="menu">
+                            {% for item in ['Держатели','Наконечники','Блоки питания','Расходные материалы','Аксессуары','Защита и уход','перманентный макияж','пирсинг'] %}
+                                <li class="menu__item">
+                                    <a href="#">{{ item }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </nav>
+                </div>
+                <div class="catalog__right">
+                    <h1 class="catalog__title">
+                        тату машинки
+                    </h1>
+                    <ul class="catalogNav">
+                        <li class="catalogNav__item">
+                            <a href="#" class="catalogNavCategory is-active">
+                                <span class="catalogNavCategory__title">все</span>
+                                <span class="catalogNavCategory__count">20</span>
+                            </a>
+                        </li>
+                        <li class="catalogNav__item">
+                            <a href="#" class="catalogNavCategory">
+                                <div class="catalogNavCategory__image">
+                                    <img src="img/catalog/indukc.jpg" alt="" srcset="img/catalog/indukc.jpg 2x">
+                                </div>
+                                <span class="catalogNavCategory__title">индукционные</span>
+                                <span class="catalogNavCategory__count">10</span>
+                            </a>
+                        </li>
+                        <li class="catalogNav__item">
+                            <a href="#" class="catalogNavCategory">
+                                <div class="catalogNavCategory__image">
+                                    <img src="img/catalog/indukc.jpg" alt="" srcset="img/catalog/indukc.jpg 2x">
+                                </div>
+                                <span class="catalogNavCategory__title">роторные</span>
+                                <span class="catalogNavCategory__count">5</span>
+                            </a>
+                        </li>
+                        <li class="catalogNav__item">
+                            <a href="#" class="catalogNavCategory">
+                                <span class="catalogNavCategory__title">запчасти для машинок</span>
+                                <span class="catalogNavCategory__count">20</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="grid grid--4">
+                        {% for item in range(0,12) %}
+                            <div class="grid__item">
+                                {{ mixins.cardGood(title="Foxxx HANDPOKE Pen Steel Pen Steel",
+                                    photo="img/carousel/good_item1.jpg",
+                                    photo2x="img/carousel/good_item1@2x.jpg 2x",
+                                    price="2 500") }}
+                            </div>
+                        {% endfor %}
+                    </div>
+                    {% include 'elements/_pagination.html' %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

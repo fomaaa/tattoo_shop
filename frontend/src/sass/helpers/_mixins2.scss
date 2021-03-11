@@ -1,0 +1,68 @@
+@mixin font-smoothing() {
+	text-rendering: optimizelegibility;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-text-size-adjust: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-tap-highlight-color: rgba(0, 0, 0, 0);
+	-moz-text-size-adjust: none;
+	-moz-font-smoothing: antialiased;
+	-ms-tap-highlight-color: rgba(0, 0, 0, 0);
+	-ms-text-size-adjust: none;
+	-ms-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@mixin top-menu-items-transition($items: 5, $initial-transition-delay: 100ms, $next-transition-delay: 50ms) {
+	@for $i from 0 through $items {
+		&:nth-child(#{$i + 1}) {
+			transition-delay: (
+					$initial-transition-delay + ($next-transition-delay * $i)
+			),
+					($initial-transition-delay + ($next-transition-delay * $i));
+		}
+	}
+}
+
+@mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {
+	@each $fs-breakpoint, $fs-font-size in $fs-map {
+		@if $fs-breakpoint == null {
+			@include make-font-size($fs-font-size);
+		} @else {
+			// If $fs-font-size is a key that exists in
+			// $fs-breakpoints, use the value
+			@if map-has-key($fs-breakpoints, $fs-breakpoint) {
+				$fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+			}
+			@media screen and (max-width: $fs-breakpoint) {
+				@include make-font-size($fs-font-size);
+			}
+		}
+	}
+}
+
+@mixin make-font-size($fs-font-size) {
+	// If $fs-font-size is a list, include
+	// both font-size and line-height
+	@if type-of($fs-font-size) == "list" {
+		font-size: nth($fs-font-size, 1);
+		@if (length($fs-font-size) > 1) {
+			line-height: nth($fs-font-size, 2);
+		}
+	} @else {
+		font-size: $fs-font-size;
+	}
+}
+
+@mixin font-face($font-name, $font-weight) {
+	$file-path: $font-path + $font-main + $font-name;
+
+	@font-face {
+		font-family: $font-main;
+		src: url($file-path + '.eot?#iefix') format('embedded-opentype'),
+		url($file-path + '.otf') format('opentype'),
+		url($file-path + '.woff') format('woff'),
+		url($file-path + '.ttf') format('truetype');
+		font-weight: $font-weight;
+		font-style: normal;
+	}
+}

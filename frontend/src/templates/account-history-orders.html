@@ -1,0 +1,307 @@
+---
+title: история заказов
+outClass:
+headerInner: true
+---
+{% set breadcrumbs = [
+    {
+        src: '/page.html',
+        title: 'Главная'
+    },
+    {
+        title: ''
+    }
+] %}
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+    <div class="section section--account section--paddingTopDefault">
+        <div class="containerFluid section__inner">
+            <div class="page__title">личный кабинет</div>
+            <div class="page__subtitle">история заказов</div>
+            <div class="account">
+                <div class="account__left">
+                    <nav class="nav nav--page">
+                        <ul class="menu">
+                            {% for item in ['изменить регистрационные данные','изменить пароль'] %}
+                                <li class="menu__item">
+                                    <a href="#">{{ item }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                        <ul class="menu">
+                            {% for item in ['история заказов','запросы на возврат','история транзакций','периодические платежи'] %}
+                                <li class="menu__item{% if loop.index === 1 %} is-active{% endif %}">
+                                    <a href="#">{{ item }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                        <ul class="menu">
+                            {% for item in ['файлы для скачивания','управление подпиской'] %}
+                                <li class="menu__item">
+                                    <a href="#">{{ item }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </nav>
+                </div>
+                <div class="account__right">
+                    <div class="tabs--default tabs--alignLeft">
+                        <div class="tabsList filterGridNav">
+                            <div class="tabsList__item">
+                                <a href="#" class="tab1 is-active" data-filter="*">все <span class="value">3</span></a>
+                            </div>
+                            <div class="tabsList__item">
+                                <a href="#" class="tab2" data-filter=".testclass2">принятые <span class="value">1</span></a>
+                            </div>
+                            <div class="tabsList__item">
+                                <a href="#" class="tab2" data-filter=".testclass3">завершенные <span
+                                            class="value">2</span></a>
+                            </div>
+                            <div class="tabsList__item">
+                                <a href="#" class="tab2 is-disabled">отмененные <span class="value">0</span></a>
+                            </div>
+                        </div>
+                        <div class="cardList filterGridBody">
+                            {% for item in ['Принят', 'Завершен', 'Завершен'] %}
+                                <div class="cardList__item filterGridBody__item testclass1">
+                                    <div class="card card--historyOrder">
+                                        <div class="accordion">
+                                            <div class="card__head accordion__head">
+                                                <div class="card__left">
+                                                    <div class="card__code">№
+                                                        06740862-0051
+                                                    </div>
+                                                    <div class="card__date">10 мая 2018
+                                                    </div>
+                                                </div>
+                                                <div class="card__right">
+                                                    <div class="card__status">{{ item }}</div>
+                                                </div>
+                                            </div>
+                                            <div class="card__body accordion__body">
+                                                <div class="card__list">
+                                                    {% for item in range(0,6) %}
+                                                        <div class="card__row">
+                                                            <div class="card__left">
+                                                                <div class="card__photo"
+                                                                     style="background-image: url('img/carousel/good_item1.jpg');"></div>
+                                                                <div class="card__title">
+                                                                    <a href="#">Foxxx
+                                                                        HANDPOKE Pen
+                                                                        Steel</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="card__right">
+                                                                <div class="card__value">1
+                                                                </div>
+                                                                <div class="card__price">
+                                                                    <span class="price price--ruble">2 508</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    {% endfor %}
+                                                </div>
+
+                                                <div class="cardTotal">
+                                                    <div class="card__row">
+                                                        <div class="card__left">
+                                                            <ul class="cardInfo">
+                                                                <li>Доставка курьером</li>
+                                                                <li>Адрес: Проспект мира,
+                                                                    19с1, офис 38
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="card__right">
+                                                            <div class="card__price">
+                                                                <span class="price price--ruble">300</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card__row">
+                                                        <div class="card__left">
+                                                            <ul class="cardInfo">
+                                                                <li>Оплата онлайн</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="card__right">
+                                                            <div class="card__value">к
+                                                                оплате
+                                                            </div>
+                                                            <div class="card__price">
+                                                                <span class="price price--ruble">9 000</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+
+                            {% for item in ['Принят', 'Завершен', 'Завершен'] %}
+                                <div class="cardList__item filterGridBody__item testclass2">
+                                    <div class="card card--historyOrder">
+                                        <div class="accordion">
+                                            <div class="card__head accordion__head">
+                                                <div class="card__left">
+                                                    <div class="card__code">№
+                                                        06740862-0051
+                                                    </div>
+                                                    <div class="card__date">10 мая 2018
+                                                    </div>
+                                                </div>
+                                                <div class="card__right">
+                                                    <div class="card__status">{{ item }}</div>
+                                                </div>
+                                            </div>
+                                            <div class="card__body accordion__body">
+                                                <div class="card__list">
+                                                    {% for item in range(0,6) %}
+                                                        <div class="card__row">
+                                                            <div class="card__left">
+                                                                <div class="card__photo"
+                                                                     style="background-image: url('img/carousel/good_item1.jpg');"></div>
+                                                                <div class="card__title">
+                                                                    <a href="#">Foxxx
+                                                                        HANDPOKE Pen
+                                                                        Steel</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="card__right">
+                                                                <div class="card__value">1
+                                                                </div>
+                                                                <div class="card__price">
+                                                                    <span class="price price--ruble">2 508</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    {% endfor %}
+                                                </div>
+
+                                                <div class="cardTotal">
+                                                    <div class="card__row">
+                                                        <div class="card__left">
+                                                            <ul class="cardInfo">
+                                                                <li>Доставка курьером</li>
+                                                                <li>Адрес: Проспект мира,
+                                                                    19с1, офис 38
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="card__right">
+                                                            <div class="card__price">
+                                                                <span class="price price--ruble">300</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card__row">
+                                                        <div class="card__left">
+                                                            <ul class="cardInfo">
+                                                                <li>Оплата онлайн</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="card__right">
+                                                            <div class="card__value">к
+                                                                оплате
+                                                            </div>
+                                                            <div class="card__price">
+                                                                <span class="price price--ruble">9 000</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+
+                            {% for item in ['Принят', 'Завершен', 'Завершен'] %}
+                                <div class="cardList__item filterGridBody__item testclass3">
+                                    <div class="card card--historyOrder">
+                                        <div class="accordion">
+                                            <div class="card__head accordion__head">
+                                                <div class="card__left">
+                                                    <div class="card__code">№
+                                                        06740862-0051
+                                                    </div>
+                                                    <div class="card__date">10 мая 2018
+                                                    </div>
+                                                </div>
+                                                <div class="card__right">
+                                                    <div class="card__status">{{ item }}</div>
+                                                </div>
+                                            </div>
+                                            <div class="card__body accordion__body">
+                                                <div class="card__list">
+                                                    {% for item in range(0,6) %}
+                                                        <div class="card__row">
+                                                            <div class="card__left">
+                                                                <div class="card__photo"
+                                                                     style="background-image: url('img/carousel/good_item1.jpg');"></div>
+                                                                <div class="card__title">
+                                                                    <a href="#">Foxxx
+                                                                        HANDPOKE Pen
+                                                                        Steel</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="card__right">
+                                                                <div class="card__value">1
+                                                                </div>
+                                                                <div class="card__price">
+                                                                    <span class="price price--ruble">2 508</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    {% endfor %}
+                                                </div>
+
+                                                <div class="cardTotal">
+                                                    <div class="card__row">
+                                                        <div class="card__left">
+                                                            <ul class="cardInfo">
+                                                                <li>Доставка курьером</li>
+                                                                <li>Адрес: Проспект мира,
+                                                                    19с1, офис 38
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="card__right">
+                                                            <div class="card__price">
+                                                                <span class="price price--ruble">300</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card__row">
+                                                        <div class="card__left">
+                                                            <ul class="cardInfo">
+                                                                <li>Оплата онлайн</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="card__right">
+                                                            <div class="card__value">к
+                                                                оплате
+                                                            </div>
+                                                            <div class="card__price">
+                                                                <span class="price price--ruble">9 000</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

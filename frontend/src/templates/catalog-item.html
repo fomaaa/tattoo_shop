@@ -1,0 +1,201 @@
+---
+title: Карточка товара
+outClass:
+headerInner: true
+---
+{% set breadcrumbs = [
+    {
+        src: '/page.html',
+        title: 'Главная'
+    },
+    {
+        src: '/catalog-category.html',
+        title: 'машинки'
+    },
+    {
+        src: '/catalog-category.html',
+        title: 'роторные'
+    },
+    {
+        title: 'foxxx irons'
+    }
+] %}
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+
+    <div class="section section--goodCard section--paddingTopDefault">
+        <div class="containerFluid section__inner">
+            <div class="goodCard">
+                <div class="goodCard__left">
+                    <div class="goodCardSlider">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                {% for item in range(0,4) %}
+                                    <div class="swiper-slide">
+                                        <img src="img/card_image.jpg" alt="">
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            <div class="swiper-button swiper-button-prev"></div>
+                            <div class="swiper-button swiper-button-next"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="goodCard__right">
+                    {% include "elements/_breadcrumbs.html" %}
+                    <div class="goodCard__title">
+                        Foxxx Scraplets
+                        Rotary Pattern #6
+                    </div>
+                    <div class="goodCard__status">
+                        в наличии
+                    </div>
+
+                    <form action="http://www.mocky.io/v2/5d19b27b2f0000a148fd70bf" class="form form--addGood goodCard__order" method="post">
+                        <input type="hidden" name="product_id" value="1" class="js-good-value-target" />
+                        <div class="goodCard__quantity">
+                            <div class="quantity quantity--lg">
+                                <div class="quantity__control quantity__control--minus minus">
+                                    {{ mixins.icon('minus') }}
+                                </div>
+                                <input type="text" class="quantity__value" value="1"/>
+                                <div class="quantity__control quantity__control--plus plus">
+                                    {{ mixins.icon('plus') }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="goodCard__price">
+                            <span class="price price--ruble">6 500</span>
+                        </div>
+
+                        <div class="goodCard__buttons">
+                            <button class="btn btn--primary btn--lg js-cart-add-item" type="submit">добавить в
+                                корзину
+                            </button>
+{#                            <button class="btn btn--primary btn--lg js-basket-add-item" type="submit">#}
+{#                                {{ mixins.icon('checked') }}#}
+{#                                <span>в корзине</span>#}
+{#                            </button>#}
+                        </div>
+                    </form>
+                </div>
+                <div class="goodCard__bottom">
+                    <div class="tabs tabs--default">
+                        <div class="tabsList">
+                            <div class="tabsList__item">
+                                <a href="#" class="tab1 is-active">описание</a>
+                            </div>
+                            <div class="tabsList__item">
+                                <a href="#" class="tab2">характеристики</a>
+                            </div>
+                        </div>
+                        <div class="tabsBox">
+                            <div class="tabs__con tabs__con_tab1 is-active">
+                                <div class="goodCardDescription">
+                                    <article>
+                                        <p>Популярная мастерская Foxxx Irons представляет свой
+                                            ротор-поворотник. Невероятно красивый инструмент в
+                                            алюминиевом корпусе и настоящей японской бумагой на
+                                            моторчике. Японский двигатель Mabuchi позволит работать
+                                            с любыми иглами и картриджами.</p>
+                                        <p>Для корректной работы машинки необходимо соблюдать
+                                            полярность подключения.</p>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="tabs__con tabs__con_tab2">
+                                <div class="goodCardDescription">
+                                    <table>
+                                        <tr>
+                                            <td>ход иглы</td>
+                                            <td>4,5 мм</td>
+                                        </tr>
+                                        <tr>
+                                            <td>рабочий вольтаж</td>
+                                            <td>до 12 вольт</td>
+                                        </tr>
+                                        <tr>
+                                            <td>разъем</td>
+                                            <td>стандартный клипкорд</td>
+                                        </tr>
+                                        <tr>
+                                            <td>производитель</td>
+                                            <td>foxxx irons (россия)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>тип</td>
+                                            <td>роторная</td>
+                                        </tr>
+                                        <tr>
+                                            <td>назначение</td>
+                                            <td>универсальная</td>
+                                        </tr>
+                                        <tr>
+                                            <td>вес</td>
+                                            <td>91 г</td>
+                                        </tr>
+
+
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section--carousel">
+        <div class="containerFluid section__inner">
+           <div class="page__title">рекомендуем также</div>
+
+            <div class="carouselBody">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        {% for item in range(0,2) %}
+                            <div class="swiper-slide">
+                                {{ mixins.cardGood(title="Блок питания Foxxx Irons Жук White Storm",
+                                    photo="img/carousel/good_item1.jpg",
+                                    photo2x="img/carousel/good_item1@2x.jpg 2x",
+                                    price="4 500") }}
+                            </div>
+                            <div class="swiper-slide">
+                                {{ mixins.cardGood(title="Блок питания Foxxx Irons Жук White Storm",
+                                    photo="img/carousel/good_item1.jpg",
+                                    photo2x="img/carousel/good_item1@2x.jpg 2x",
+                                    price="4 500") }}
+                            </div>
+                            <div class="swiper-slide">
+                                {{ mixins.cardGood(title="Блок питания Foxxx Irons Жук White Storm",
+                                    photo="img/carousel/good_item1.jpg",
+                                    photo2x="img/carousel/good_item1@2x.jpg 2x",
+                                    price="4 500") }}
+                            </div>
+                            <div class="swiper-slide">
+                                {{ mixins.cardGood(title="Foxxx HANDPOKE Pen Steel",
+                                    photo="img/carousel/good_item1.jpg",
+                                    photo2x="img/carousel/good_item1@2x.jpg 2x",
+                                    price="2 500") }}
+                            </div>
+                            <div class="swiper-slide">
+                                {{ mixins.cardGood(title="Foxxx HANDPOKE Pen Steel",
+                                    photo="img/carousel/good_item1.jpg",
+                                    photo2x="img/carousel/good_item1@2x.jpg 2x",
+                                    price="2 500") }}
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="swiper-button swiper-button-prev"></div>
+                    <div class="swiper-button swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,39 @@
+.breadcrumbs {
+
+	&:first-child{
+		margin-top: 25px;
+	}
+}
+
+.breadcrumbsList {
+	display: flex;
+	flex-flow: wrap;
+	justify-content: center;
+
+
+	.breadcrumbsList__item:not(:first-child) {
+		position: relative;
+		color: #a2a2a2;
+
+		&:before {
+			content: '<';
+			display: inline-block;
+			margin: 0 5px 0 10px;
+			font-size: inherit;
+			color: inherit;
+		}
+	}
+
+	span,
+	a {
+		color: #a2a2a2;
+		font-size: 14px;
+		line-height: 35px;
+		text-transform: uppercase;
+	}
+
+	a:hover {
+		color: $primary-color;
+	}
+
+}

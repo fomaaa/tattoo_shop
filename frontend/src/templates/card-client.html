@@ -1,0 +1,52 @@
+---
+title: Карта клиента
+outClass:
+headerInner: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+    <div class="section section--certificates section--paddingTopDefault">
+        <div class="container section__inner">
+            <div class="certificatesCards">
+                <div class="certificatesCards__item">
+                    <div class="certificatesCards__row">
+                        <span>-5%</span>
+                        <span>000 184</span>
+                    </div>
+                </div>
+                <div class="certificatesCards__item">
+                    <div class="certificatesCards__row">
+                        <span>-5%</span>
+                        <span>001 839</span>
+                    </div>
+                </div>
+                <div class="certificatesCards__item">
+                    <div class="certificatesCards__row">
+                        <span>-5%</span>
+                        <span>001 478</span>
+                    </div>
+                </div>
+            </div>
+            <div class="certificatesDescription">
+                <article>
+                    <h1>
+                        {{ title }}
+                    </h1>
+                    <p>
+                        Дорогие друзья, совершая покупку в магазине TattooPro вы автоматически
+                        получаете карту постоянного клиента уже после первого заказа!
+                        Карта постоянного клиента дает вам право на получение 5% скидки на все
+                        последующие покупки.
+                    </p>
+                    <p>С картой постоянного покупателя вы автоматически становитесь участников наших
+                        конкурсов и розыгрышей, а также можете получать специальные скидки в период
+                        распродажи.</p>
+                </article>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+

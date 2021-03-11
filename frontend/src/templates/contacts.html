@@ -1,0 +1,80 @@
+---
+title: Контакты
+outClass:
+headerInner: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+    <div class="section section--contacts section--paddingTopDefault">
+       <div class="container section__inner">
+            <div class="page__title">
+                <h1>контакты</h1>
+            </div>
+
+           <div class="contacts">
+               <div class="contacts__left">
+                   <ul class="contacts__links">
+                       <li>
+                           <a href="tel:+7 800 707-16-40">
+                               +7 800 707-16-40
+                           </a>
+                       </li>
+                       <li>
+                           <a href="mailto:tattoopromsk@gmail.com">
+                               tattoopromsk@gmail.com
+                           </a>
+                       </li>
+                   </ul>
+
+                   <div class="contactsLocation">
+                       <div class="contactsLocation__title">
+                           наше местонахождение
+                       </div>
+                       <div class="contactsLocation__address">
+                           Проспект Мира, 19с1, офис 38
+                       </div>
+                       <div class="contactsLocation__small">
+                           с 10:00 до 20:00 Без выходных
+                       </div>
+                   </div>
+
+                   <div class="metroBox">
+                       <div class="metroBox__image">
+                           <img src="img/metro_image2.png" alt="">
+                       </div>
+                       <div class="metroBox__body">
+                           <p>
+                               3 минуты пешком
+                           </p>
+                           <p>
+                               от кольцевой станции метро
+                           </p>
+                       </div>
+                   </div>
+               </div>
+               <div class="contacts__right">
+                   <h3 class="text--center">написать нам</h3>
+                   <div class="auth__body">
+                       <form action="/" class="form form--auth">
+                           <div class="form__group">
+                               {{ mixins.form_field(label="Имя", required="true") }}
+                               {{ mixins.form_field(label="ЭЛ. почта", required="true") }}
+                               {{ mixins.form_textarea(label="Ваше сообщение", required="true") }}
+                           </div>
+                           <div class="form__button">
+                               <button class="btn btn--primary btn--lg" type="submit">
+                                   отправить
+                               </button>
+                           </div>
+                       </form>
+                   </div>
+               </div>
+           </div>
+       </div>
+        <div class="locationMap" id="map"></div>
+    </div>
+
+
+{% endblock %}

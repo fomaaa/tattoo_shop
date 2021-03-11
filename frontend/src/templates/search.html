@@ -1,0 +1,46 @@
+---
+title: Поиск
+outClass:
+headerClass:
+---
+{% set breadcrumbs = [
+    {
+        src: '/page.html',
+        title: 'Главная'
+    },{
+        src: '/page.html',
+        title: 'Каталог'
+    },
+    {
+        title: 'Результаты поиска'
+    }
+] %}
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+
+    <div class="section section--search section--paddingTopDefault">
+       <div class="containerMd section__inner">
+           {% include "elements/_breadcrumbs.html" %}
+            <div class="page__title">
+                Товары по запросу «ку»
+            </div>
+           <div class="page__subtitle">НАЙДЕНО 40 ТОВАРОВ</div>
+
+           <div class="grid grid--4">
+               {% for item in range(0,12) %}
+                   <div class="grid__item">
+                       {{ mixins.cardGood(title="Foxxx HANDPOKE Pen Steel Pen Steel",
+                           photo="img/carousel/good_item1.jpg",
+                           photo2x="img/carousel/good_item1@2x.jpg 2x",
+                           price="2 500") }}
+                   </div>
+               {% endfor %}
+           </div>
+           {% include 'elements/_pagination.html' %}
+       </div>
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,94 @@
+---
+title: Index page
+outClass:
+headerInner: true
+---
+{% set breadcrumbs = [
+    {
+        src: '/page.html',
+        title: 'Главная'
+    },
+    {
+        title: ''
+    }
+] %}
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+    <div class="section section--account section--paddingTopDefault">
+        <div class="containerFluid section__inner">
+            <div class="page__title">личный кабинет</div>
+            <div class="page__subtitle">изменить регистрационные данные</div>
+            <div class="account">
+                <div class="account__left">
+                    <nav class="nav nav--page">
+                        <ul class="menu">
+                            {% for item in ['изменить регистрационные данные','изменить пароль'] %}
+                                <li class="menu__item{% if loop.index === 1 %} is-active{% endif %}">
+                                    <a href="#">{{ item }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                        <ul class="menu">
+                            {% for item in ['история заказов','запросы на возврат','история транзакций','периодические платежи'] %}
+                                <li class="menu__item">
+                                    <a href="#">{{ item }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                        <ul class="menu">
+                            {% for item in ['файлы для скачивания','управление подпиской'] %}
+                                <li class="menu__item">
+                                    <a href="#">{{ item }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </nav>
+                </div>
+                <div class="account__right">
+                    <div class="account__form">
+                        <div class="formBlock">
+                            <div class="formBlock__notification">
+                                <div class="notificationBox notificationBox--error">
+                                    <span class="notificationBox__text">К сожалению, ваш аккаунт не активирован. Пройдите по ссылке в письме email</span>
+                                </div>
+                                <div class="notificationBox notificationBox--success">
+                                    <span class="notificationBox__text">Ссылка для восстановления отправлена на ваш email</span>
+                                </div>
+                            </div>
+                            <form action="/" class="form form--account">
+                                <div class="form__row">
+                                    <div class="form__groupWrapper">
+                                        <div class="form__title">контакты</div>
+                                        <div class="form__group">
+                                            {{ mixins.form_field(label="email") }}
+                                            {{ mixins.form_field(label="Имя") }}
+                                            {{ mixins.form_field(label="Фамилия") }}
+                                            {{ mixins.form_field(label="Телефон") }}
+                                        </div>
+                                    </div>
+                                    <div class="form__groupWrapper">
+                                        <div class="form__title">адрес</div>
+                                        <div class="form__group">
+                                            {{ mixins.form_field(label="страна") }}
+                                            {{ mixins.form_field(label="город") }}
+                                            {{ mixins.form_field(label="адрес") }}
+                                            {{ mixins.form_field(label="индекс") }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form__button">
+                                    <button class="btn btn--primary btn--lg" type="submit">
+                                        сохранить изменения
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,24 @@
+.form--searchLine {
+	position: relative;
+
+	input {
+		border-bottom: 1px solid #000;
+		width: 100%;
+		color: #000;
+		letter-spacing: 0.1em;
+		height: 66px;
+		padding-right: 60px;
+
+
+		&::placeholder {
+			text-transform: uppercase;
+			color: #000;
+		}
+	}
+
+	.btn--glass {
+		position: absolute;
+		top: 0;
+		right: -11px;
+	}
+}

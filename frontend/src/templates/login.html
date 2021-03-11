@@ -1,0 +1,43 @@
+---
+title: Авторизация
+outClass:
+headerInner: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+<div class="section section--auth section--paddingTopDefault">
+   <div class="container section__inner">
+
+       <div class="page__title">личный кабинет</div>
+
+       <div class="auth">
+           <ul class="authLinks">
+               <li class="authLinks__item">
+                   <a href="/login.html" class="is-active">Вход</a>
+               </li>
+               <li class="authLinks__item">
+                   <a href="/registration.html">регистрация</a>
+               </li>
+           </ul>
+
+           <div class="auth__body">
+               <form action="/" class="form form--auth">
+                   <div class="form__group">
+                       {{ mixins.form_field(label="email") }}
+                       {{ mixins.form_field(label="Пароль", linkTop="Напомнить пароль") }}
+                   </div>
+                   <div class="form__button">
+                       <button class="btn btn--primary btn--lg" type="submit">
+                           Войти
+                       </button>
+                   </div>
+               </form>
+           </div>
+       </div>
+
+   </div>
+</div>
+
+{% endblock %}

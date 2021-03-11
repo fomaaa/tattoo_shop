@@ -1,0 +1,70 @@
+category_id,parent_id,name(ru-ru),top,columns,sort_order,image_name,date_added,date_modified,seo_keyword,description(ru-ru),meta_title(ru-ru),meta_description(ru-ru),meta_keywords(ru-ru),store_ids,layout,status
+59,0,КАРТА КЛИЕНТА,true,100,0,catalog/IMG_8586.JPG,2017-02-18 19:06:17,2019-03-28 00:29:37,client card,"<h3><font color=""#424242"">Дорогие друзья, совершая покупку в магазине TattooPro вы автоматически получаете карту постоянного клиента уже после первого заказа!</font></h3><h4><font color=""#424242"">- Карта постоянного клиента дает вам право на получение 5% скидки на все последующие покупки.</font></h4><h4><font color=""#424242"">- С картой постоянного покупателя вы автоматически становитесь участников наших конкурсов и розыгрышей, а также можете получать специальные скидки в период распродажи.&nbsp;</font></h4>
+",client card,,,0,0:,false
+60,0,Тату наборы,true,1,1,,2017-02-18 19:08:49,2019-03-28 00:33:13,tatu-nabory,,Тату наборы,,,0,0:,true
+61,60,Наборы с индукционной машинкой,false,1,0,catalog/NRPP10 копия-1.jpg,2017-02-18 19:10:13,2017-10-22 23:21:30,nabory-s-induktsionnoj-mashinkoj,,Наборы с индукционной машинкой,,,0,0:,true
+62,60,Наборы с роторной машинкой,false,1,1,catalog/NRPP10 копия-1.jpg,2017-02-18 19:10:55,2017-10-22 23:22:07,nabory-s-rotornoj-mashinkoj,,Наборы с роторной машинкой,,,0,0:,true
+63,0,Тату машинки,true,1,3,,2017-02-18 19:12:10,2019-03-28 00:32:59,tatu-mashinki,,Тату машинки,,,0,0:,true
+64,63,Индукционные,false,1,0,catalog/indushka.jpg,2017-02-18 19:13:10,2018-03-03 00:25:40,induktsionnye,,Индукционные,,,0,0:,true
+65,63,Роторные,false,1,1,catalog/M7.jpg,2017-02-18 19:13:27,2019-03-28 00:41:54,rotornye,,Роторные,,,0,0:,true
+66,63,Запчасти для машинок,false,1,3,catalog/фыф.jpg,2017-02-18 19:13:47,2019-03-28 00:42:21,zapchasti-dlja-mashinok,,Запчасти для машинок,,,0,0:,true
+67,0,Энергия,true,1,5,,2017-02-18 19:18:41,2019-03-28 00:33:21,sistemi-pitanija,,Блоки питания,,,0,0:,true
+68,67,Блоки питания,false,1,0,catalog/блок копия.jpg,2017-02-18 19:19:36,2018-03-03 00:50:44,bloki-pitanija,,Блоки питания,,,0,0:,true
+69,67,Клип-корды,false,1,2,catalog/шнур.jpg,2017-02-18 19:26:11,2018-03-03 00:59:19,klip-kordy,,Клип-корды,,,0,0:,true
+70,67,Педали,false,1,5,catalog/педалька-1.jpg,2017-02-18 19:26:27,2018-03-03 00:57:18,pedali,,Педали,,,0,0:,true
+71,0,Краски,true,1,7,,2017-02-18 19:26:49,2019-03-28 00:32:24,tatu-kraski,,Тату краски,,,0,0:,true
+72,0,Тату иглы,true,1,10,,2017-02-18 19:28:00,2019-03-28 00:32:13,tatu-igly,,Тату иглы,,,0,0:,true
+73,72,RL,false,1,10,catalog/RL.jpg,2017-02-18 19:28:33,2017-10-25 22:19:51,rl,,Тату иглы RL,,,0,0:,true
+74,72,RS,false,1,20,catalog/RS.jpg,2017-02-18 19:29:31,2017-10-25 22:21:13,rs,,Тату иглы RS,,,0,0:,true
+75,72,RM,false,1,30,catalog/RM-2.png,2017-02-18 19:30:14,2018-01-21 14:14:47,rm,,Тату иглы RM,,,0,0:,true
+77,72,Magnum,false,1,50,catalog/M.png,2017-02-18 19:31:05,2018-01-21 14:15:38,magnum,,Тату иглы Magnum,,,0,0:,true
+78,0,Держатели,true,1,15,,2017-02-18 19:38:01,2019-03-28 00:29:13,derzhateli,,Держатели,,,0,0:,true
+79,78,Стальные держатели,false,1,10,catalog/держ.jpg,2017-02-18 19:38:27,2017-10-25 22:32:11,stalnye-derzhateli,,Стальные держатели,,,0,0:,true
+80,78,Насадки на держатели,false,1,20,catalog/накладка-1.jpg,2017-02-18 19:38:51,2017-10-25 22:51:38,nasadki-na-derzhateli,,Насадки на держатели,,,0,0:,true
+81,78,Держатели из алюминия ,false,1,30,catalog/ывы.jpg,2017-02-18 19:39:12,2017-10-25 23:16:31,odnorazovye-derzhateli,,Держатели из алюминия ,,,0,0:,true
+82,78,Пластиковые держатели,false,1,40,,2017-02-18 19:39:41,2017-10-25 23:17:40,plastikovye-derzhateli,,Пластиковые держатели,,,0,0:,false
+83,78,Трубки для держателей,false,1,50,catalog/back_stem.jpg,2017-02-18 19:39:59,2017-12-07 21:13:34,trubki-zadnie,,Трубки задние ,,,0,0:,true
+84,78,Держатели для картриджей,false,1,60,catalog/держ.png,2017-02-18 19:40:14,2017-10-25 23:25:29,derzhateli-dlja-kartridzhej,,Держатели для картриджей,,,0,0:,true
+85,0,Типсы / Носики,true,1,20,,2017-02-18 19:41:10,2019-03-28 00:32:47,nakonechniki,,Наконечники,,,0,0:,true
+86,85,Стальные,false,1,10,catalog/выва.png,2017-02-18 19:43:10,2017-10-25 23:36:32,stalnye,,Стальные,,,0,0:,true
+87,85,Одноразовые,false,1,20,catalog/Supply-Most-Popular-Disposable-Tattoo-Needle-Tips-1.jpg,2017-02-18 19:43:27,2017-10-25 23:31:11,odnorazovye,,Одноразовые,,,0,0:,true
+88,0,Расходники,true,1,25,,2017-02-18 19:59:06,2019-03-28 00:31:28,rasxodnye-materialy,,Расходные материалы,,,0,0:,true
+89,88,Перевод изображения,false,1,10,catalog/100Sheets-Pro-Tattoo-Thermal-Stencil-font-b-Transfer-b-font-font-b-Paper-b-font-A4.png,2017-02-18 19:59:29,2017-10-29 04:59:58,transfer,,Трансфер,,,0,0:,true
+91,88,Колпачки,false,1,30,catalog/ts-200148-1-17mm-product-000-1001_large-1.jpg,2017-02-18 20:00:50,2017-10-29 04:58:42,kolpachki,,Колпачки,,,0,0:,true
+92,88,Резинки,false,1,40,catalog/ACC1036A 彩色橡皮筋.png,2017-02-18 20:01:04,2017-10-29 05:00:37,rezinki,,Резинки,,,0,0:,true
+93,0,Защита и уход,true,1,30,,2017-02-18 20:02:20,2019-03-28 00:29:31,zaschita,,Защита,,,0,0:,true
+94,93,Дезинфекция и профилактика,false,1,10,catalog/235591_enl.jpg,2017-02-18 20:03:10,2017-10-29 04:55:06,dezinfektsija-i-profilaktika,,Дезинфекция и профилактика,,,0,0:,true
+95,93,Обезболивающие средства,false,1,20,catalog/23efb7f9cde7704490d663ec42f65f88945f95b7.jpg,2017-02-18 20:03:25,2017-10-29 04:55:24,obezbolivajuschie-sredstva,,Обезболивающие средства,,,0,0:,true
+96,93,"Перчатки, пакеты",false,1,30,catalog/перч.png,2017-02-18 20:03:43,2017-10-29 05:02:53,perchatki-pakety,,"Перчатки, пакеты",,,0,0:,true
+97,93,Уход,true,1,40,catalog/Вазелин Tattoo Butter — 250мл (Mustang Tattoo) 4.jpg,2017-02-18 22:01:25,2017-12-10 00:34:58,uxod,,Уход,,,0,0:,true
+98,0,Перманент ,true,1,50,catalog/set1-2.jpg,2017-02-18 22:01:49,2019-03-28 00:31:16,permanentnyj-makijazh,,Перманентный макияж,,,0,0:,true
+99,98,Оборудование ,false,1,10,catalog/gmakeuppen.jpg,2017-02-18 22:02:05,2018-03-25 01:18:49,oborudovanie,,Оборудование ,,,0,0:,true
+100,98,Краска,false,1,20,catalog/set1-2.jpg,2017-02-18 22:02:17,2018-03-25 01:00:19,kraska,,Краска,,,0,0:,true
+101,98,Аксессуары,false,1,30,catalog/permneed.jpg,2017-02-18 22:02:31,2018-03-25 01:17:57,aksessuary,,Аксессуары,,,0,0:,true
+102,0,Пирсинг,true,1,60,,2017-02-18 22:03:43,2019-03-28 00:31:52,pirsing,,Пирсинг,,,0,0:,true
+103,102,Оборудование для пирсинга,false,1,10,catalog/pist.jpg,2017-02-18 22:04:03,2018-03-25 01:28:34,oborudovanie-dlja-pirsinga,,Оборудование для пирсинга,,,0,0:,true
+104,102,Украшения,false,1,20,catalog/pierc.jpg,2017-02-18 22:04:19,2018-03-25 01:28:59,ukrashenija,,Украшения,,,0,0:,true
+105,71,Intenze,false,1,0,catalog/Intenze.jpg,2017-09-28 20:57:38,2017-10-01 19:59:19,intenze_ink,,Intenze,,,0,0:,true
+106,71,Eternal,false,1,0,catalog/CMYK_Eternal_Ink_Logo.jpg,2017-09-28 20:58:28,2017-10-01 19:58:56,eternal_ink,,Eternal,,,0,0:,true
+107,71,World Famous,false,1,0,catalog/3529285_orig.png,2017-09-28 20:58:52,2017-10-01 20:03:08,world-famous,,World Famous,,,0,0:,true
+108,71,Dynamic,false,1,0,catalog/nameplate.jpg,2017-09-28 20:59:34,2017-10-02 19:51:37,dynamic,,Dynamic,,,0,0:,true
+109,71,KPA CKA,false,1,0,catalog/1К2.jpg,2017-09-28 21:00:04,2017-10-02 19:50:20,kpa-cka,,KPA CKA,,,0,0:,true
+110,93,Барьерная защита,false,1,0,catalog/480367181_336.png,2017-09-28 21:00:51,2017-10-29 04:54:42,barjernaja-zaschita,,barrier_care,,,0,0:,true
+111,0,Аксессуары,true,1,45,,2017-09-28 21:05:25,2019-03-28 00:29:05,aksessuary_cat,<p><br></p>,Аксессуары,,,0,0:,true
+112,0,Картриджи,true,1,11,,2017-12-04 23:41:59,2019-03-28 00:29:51,kartridzhi,,kartridgi,,,0,0:,true
+113,112,Spark,true,1,0,catalog/1211.png,2017-12-07 00:06:25,2018-02-03 15:41:42,spark,,spark,,,0,0:,true
+114,71,Частокол,false,1,0,catalog/частокол краска.png,2017-12-15 00:10:13,2018-12-09 00:03:08,nocrurnal,,nocturnal,,,0,0:,true
+115,112,WHITE BONE,false,1,0,catalog/1213.png,2017-12-15 01:10:59,2018-02-03 15:45:28,white-bone,,white bone,,,0,0:,true
+116,78,Держатели одноразовые,false,1,0,catalog/Снимок экрана 2018-08-19 в 22.33.56.png,2018-08-19 22:35:00,2018-08-19 22:35:00,derzhateli-odnorazovye,,dergateli,,,0,0:,true
+117,112,EZ,false,1,0,catalog/2.png,2018-08-22 08:15:45,2018-11-29 23:03:59,ez,,EZ_1,,,0,0:,true
+118,112,INOX,false,1,0,catalog/cart_inox_m-500x500.png,2018-08-22 08:16:25,2018-11-29 23:04:32,inox,,INOX,,,0,0:,true
+119,71,Черная краска,false,1,0,catalog/ЧЕРНКРАСК 2.png,2018-09-12 23:43:49,2018-09-12 23:47:25,chernaja-tatu-kraska,,blackink,,,0,0:,true
+120,71,Solid ink,false,1,0,catalog/OPAQUE_12_SET_a.jpg,2018-10-09 01:06:54,2018-10-09 01:13:35,solid-ink,,solid-ink,,,0,0:,true
+121,71,Наборы красок,false,1,0,catalog/World-Famous-Tattoo-Ink-----1oz--Simple-6-Color-Ink-Set-resim-690.jpg,2018-10-09 01:08:37,2018-10-09 01:15:07,nabory-krasok,,nabori,,,0,0:,true
+122,88,"Пеленки, крафт пакеты",false,1,45,catalog/kraft.jpg,2018-12-18 00:14:07,2018-12-18 00:17:24,pelenki-kraft-pakety,,kraft,,,0,0:,true
+123,0,Мебель,false,1,49,catalog/c3252777052f21eebc24cf58e3a34e9d.jpg,2019-02-04 07:59:24,2019-03-28 00:30:08,mebel,,tatumebel,,,0,0:,true
+124,63,Пены,false,1,2,catalog/PEN.png,2019-03-28 00:37:41,2019-03-28 00:42:34,peny,,tattoo_pen,,,0,0:,true
+125,112,Kwadron,false,1,0,catalog/KWcartrige m-150x150 копия.jpg,2019-04-01 22:58:44,2019-04-01 23:01:08,kwadron,,kwadron cartridge,,,0,0:,true
+126,112,Cheyenne,false,1,0,catalog/cheyenne-craft-main.png,2019-04-01 23:02:27,2019-04-01 23:02:27,cheyenne,,cheyenne,,,0,0:,true
+127,71,Nocturnal,false,1,0,catalog/nocturnal_ink.png,2019-06-17 15:19:12,2019-06-17 15:19:12,kraski,,nocturnal,,,0,0:,true
+category_id,filter_group,filter

@@ -1,0 +1,16 @@
+@import "cardGood";
+@import "cardCategory";
+@import "cardBlog";
+@import "cardGoodMini";
+@import "cardArticle";
+@import "cardHistoryOrder";
+
+
+.card {
+	position: relative;
+
+	.card__link {
+		z-index: 3;
+		@include coverdiv();
+	}
+}

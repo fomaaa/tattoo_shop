@@ -1,0 +1,40 @@
+.section--carousel {
+	margin: 47px 0;
+
+	.page__title {
+		margin-bottom: 40px;
+	}
+}
+
+.carouselHead {
+
+	.carouselHead__inner {
+		margin-left: -2000px !important;
+		margin-right: -2000px !important;
+	}
+
+	.carouselHead__inner--new {
+		background-image: url('../img/carousel/text_new.jpg');
+		background-repeat: repeat-x;
+		background-position: 20% 50%;
+		height: 28px;
+		margin: 0 -22px 40px;
+	}
+
+	.carouselHead__inner--bestsellers {
+		background-image: url('../img/carousel/text_bestsellers.jpg');
+		background-repeat: repeat-x;
+		background-position: 30% 50%;
+		height: 58px;
+		margin: 0 -22px 25px;
+	}
+}
+
+
+.carouselBody {
+	margin: 0 -12px;
+
+	.swiper-container {
+		overflow: visible;
+	}
+}

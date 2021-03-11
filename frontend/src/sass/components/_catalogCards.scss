@@ -1,0 +1,17 @@
+.section--catalogCards {
+}
+
+.catalogCards {
+	display: flex;
+	flex-flow: wrap;
+	margin: -10px;
+
+	&__item {
+		width: 33.33%;
+		padding: 10px;
+
+		.card {
+			height: 361px;
+		}
+	}
+}

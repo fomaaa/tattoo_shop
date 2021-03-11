@@ -1,0 +1,63 @@
+---
+title: Авторизация
+outClass:
+headerInner: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+    <div class="section section--auth section--paddingTopDefault">
+        <div class="container section__inner">
+
+            <div class="page__title">личный кабинет</div>
+
+            <div class="auth">
+                <ul class="authLinks">
+                    <li class="authLinks__item">
+                        <a href="/login.html">Вход</a>
+                    </li>
+                    <li class="authLinks__item">
+                        <a href="/registration.html" class="is-active">регистрация</a>
+                    </li>
+                </ul>
+
+                <div class="auth__body">
+                    <form action="/" class="form form--auth">
+                        <div class="form__group">
+                            {{ mixins.form_field(label="email", required="true") }}
+                            {{ mixins.form_field(label="Пароль", required="true") }}
+                            {{ mixins.form_field(label="Пароль еще раз", required="true") }}
+                            {{ mixins.form_field(label="Имя", required="true") }}
+                            {{ mixins.form_field(label="Фамилия") }}
+                            {{ mixins.form_field(label="Телефон", required="true") }}
+                        </div>
+                        <div class="form__hideFields hideFields">
+                            <div class="hideFields__button">
+                                <a href="#" class="btn btn--transparent js-hideField-button">
+                                    {{ mixins.icon('plus') }}
+                                    <span>добавить адрес</span>
+                                </a>
+                            </div>
+                            <div class="hideFields__body">
+                                <div class="form__group">
+                                    {{ mixins.form_field(label="Страна") }}
+                                    {{ mixins.form_field(label="Город") }}
+                                    {{ mixins.form_field(label="Адрес") }}
+                                    {{ mixins.form_field(label="Индекс") }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__button">
+                            <button class="btn btn--primary btn--lg" type="submit">
+                                зарегистрироваться
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}

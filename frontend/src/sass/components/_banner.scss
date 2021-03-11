@@ -1,0 +1,140 @@
+.section--banner {
+	padding: 23px 0;
+	margin-bottom: 55px;
+
+	.section__inner {
+		display: flex;
+		//justify-content: space-between;
+
+		.section__left {
+			width: $column-sm;
+			margin-right: 43px;
+			position: relative;
+			z-index: 10;
+			background-color: #fff;
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				right: 100%;
+				left: -9000px;
+				background-color: #fff;
+			}
+		}
+
+		.section__right {
+			width: $column-md;
+		}
+	}
+
+	.bannerSlider {
+		margin-top: 7px;
+	}
+}
+
+.bannerSlider {
+
+	.swiper-container {
+		overflow: visible;
+
+		.swiper-slide {
+			opacity: 0;
+			transition: .3s all;
+			height: auto;
+		}
+
+		.swiper-slide-active,
+		.swiper-slide-next {
+			opacity: 1;
+		}
+
+		.swiper-slide-next {
+			display: flex;
+			align-items: center;
+		}
+
+		.swiper-slide:not(.swiper-slide-active) .bannerSliderItem {
+			//width: 268px;
+			//height: 376px;
+			width: 248px;
+			height: 346px;
+			text-align: left;
+			padding: 33px 22px;
+			justify-content: flex-end;
+
+			&__link {
+				pointer-events: none;
+			}
+
+			.bannerSliderItem__subtitle {
+				font-size: 24px;
+				line-height: 32px;
+
+				&:not(:first-child) {
+					margin-top: 3px;
+				}
+			}
+		}
+	}
+
+	.swiper-pagination {
+		bottom: auto;
+		top: 5px;
+		left: 0;
+		right: 0;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 20px;
+
+		&.swiper-pagination--bottom {
+			top: auto;
+			bottom: 5px;
+		}
+
+		.swiper-pagination-bullet {
+			width: auto;
+			height: auto;
+			background-color: transparent;
+			opacity: 1;
+			color: #fff;
+
+			&.swiper-pagination-bullet-active {
+				opacity: .5;
+			}
+		}
+	}
+}
+
+.bannerSliderItem {
+	color: #fff;
+	font-size: 30px;
+	line-height: 39px;
+	text-align: center;
+	height: 436px;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	@include cover();
+
+	&__link {
+		@include coverdiv();
+	}
+
+	&__title {
+		font-family: $font-secondary;
+		text-transform: uppercase;
+	}
+
+	&__subtitle {
+		letter-spacing: 0;
+
+		&:not(:first-child) {
+			margin-top: 10px;
+		}
+	}
+}

@@ -1,0 +1,80 @@
+@import "inputs";
+@import "radioButtonPrice";
+@import "range";
+@import "radio";
+
+.form__field {
+
+	&.is-required {
+
+		.label__title:after {
+			content: '*';
+			color: #ff3b30;
+		}
+	}
+
+	> .label {
+		font-size: 14px;
+		text-transform: uppercase;
+		color: #a3a3a3;
+		display: flex;
+		justify-content: space-between;
+		line-height: 1;
+	}
+
+	.input {
+		width: 100%;
+	}
+
+	> .help-block {
+		font-size: 10px;
+		line-height: 14px;
+		color: $primary-color;
+		margin-top: 5px;
+	}
+}
+
+.form {
+
+	.form__group {
+		background-color: #fff;
+		padding: 11px 15px;
+		border-radius: 10px;
+
+		.form__field:not(:first-child) {
+			border-top: 1px solid #e1e1e1;
+			margin-top: 10px;
+			padding-top: 10px;
+		}
+
+	}
+	.form__hideFields {
+		margin-top: 10px;
+	}
+
+	.form__button {
+		margin-top: 10px;
+		text-align: center;
+
+		.btn {
+			width: 100%;
+		}
+	}
+}
+
+
+.form__title {
+	font-family: $font-secondary;
+	letter-spacing: 0.05em;
+
+	+ .form__group {
+		margin-top: 6px;
+	}
+}
+
+.form__rules {
+	font-size: 12px;
+	line-height: 18px;
+	letter-spacing: 0;
+	max-width: 542px;
+}

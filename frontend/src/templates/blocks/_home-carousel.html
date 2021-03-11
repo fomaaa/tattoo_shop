@@ -1,0 +1,74 @@
+<div class="section section--carousel">
+    <div class="containerFluid section__inner">
+        <div class="carouselHead">
+            <div class="carouselHead__inner carouselHead__inner--new"></div>
+        </div>
+
+        <div class="carouselBody">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    {% for item in range(0,2) %}
+                        <div class="swiper-slide">
+                            {{ mixins.cardGood(title="Блок питания Foxxx Irons Жук White Storm",
+                                photo="img/carousel/good_item1.jpg",
+                                photo2x="img/carousel/good_item1@2x.jpg 2x",
+                                price="4 500") }}
+                        </div>
+                        <div class="swiper-slide">
+                            {{ mixins.cardGood(title="Блок питания Foxxx Irons Жук White Storm",
+                                photo="img/carousel/good_item1.jpg",
+                                photo2x="img/carousel/good_item1@2x.jpg 2x",
+                                price="4 500") }}
+                        </div>
+                        <div class="swiper-slide">
+                            {{ mixins.cardGood(title="Блок питания Foxxx Irons Жук White Storm",
+                                photo="img/carousel/good_item1.jpg",
+                                photo2x="img/carousel/good_item1@2x.jpg 2x",
+                                price="4 500") }}
+                        </div>
+                        <div class="swiper-slide">
+                            {{ mixins.cardGood(title="Foxxx HANDPOKE Pen Steel",
+                                photo="img/carousel/good_item1.jpg",
+                                photo2x="img/carousel/good_item1@2x.jpg 2x",
+                                price="2 500") }}
+                        </div>
+                        <div class="swiper-slide">
+                            {{ mixins.cardGood(title="Foxxx HANDPOKE Pen Steel",
+                                photo="img/carousel/good_item1.jpg",
+                                photo2x="img/carousel/good_item1@2x.jpg 2x",
+                                price="2 500") }}
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="swiper-button swiper-button-prev"></div>
+                <div class="swiper-button swiper-button-next"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section section--carousel">
+    <div class="containerFluid section__inner">
+        <div class="carouselHead">
+            <div class="carouselHead__inner carouselHead__inner--bestsellers"></div>
+        </div>
+
+        <div class="carouselBody">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    {% for item in range(0,10) %}
+                        <div class="swiper-slide">
+                            {{ mixins.cardGood(title="SPARK CARTRIDGE ROUND SHADER 7",
+                                photo="img/carousel/good_item1.jpg",
+                                photo2x="img/carousel/good_item1@2x.jpg 2x",
+                                price="1 060") }}
+                        </div>
+                    {% endfor %}
+                </div>
+
+                <div class="swiper-button swiper-button-prev"></div>
+                <div class="swiper-button swiper-button-next"></div>
+            </div>
+        </div>
+    </div>
+</div>

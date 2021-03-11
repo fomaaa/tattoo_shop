@@ -1,0 +1,63 @@
+.notificationBox {
+	font-size: 12px;
+	padding: 26px 5px;
+	text-align: center;
+
+
+	.notificationBox__text {
+		display: inline-block;
+		white-space: normal;
+		line-height: 20px;
+		text-align: left;
+	}
+
+	&.notificationBox--error {
+		background-color: #fff2f2;
+		color: #786464;
+
+		.notificationBox__text {
+			position: relative;
+			padding-left: 12px + 15px;
+
+			&:before {
+				content: '';
+				display: inline-block;
+				width: 12px;
+				position: absolute;
+				top: 6px;
+				left: 0;
+				vertical-align: middle;
+				margin-top: -2px;
+				height: 12px;
+				background-image: url('../img/error.svg');
+				@include cover();
+			}
+		}
+	}
+
+
+	&.notificationBox--success {
+		background-color: #f6faf5;
+		color: #4f5c4a;
+
+		.notificationBox__text {
+			position: relative;
+			padding-left: 12px + 15px;
+
+			&:before {
+				content: '';
+				position: absolute;
+				width: 12px;
+				top: 8px;
+				left: 0;
+				vertical-align: middle;
+				margin-top: -2px;
+				height: 8px;
+				background-image: url('../img/checked-green.svg');
+				@include cover();
+			}
+		}
+	}
+}
+
+

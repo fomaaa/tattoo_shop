@@ -1,0 +1,83 @@
+.subscribe__title {
+	white-space: nowrap;
+	text-transform: uppercase;
+	padding: 12px 0 11px;
+	background-color: #fff;
+	display: flex;
+
+	span:not(:first-child) {
+		margin-left: 10px;
+	}
+}
+
+.subscribe__body {
+	padding: 0 20px;
+}
+
+.subscribeNotification {
+	min-height: 96px;
+	background-color: #222;
+	padding: 22px;
+	color: #fff;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	.subscribeNotification__title {
+		text-transform: uppercase;
+		@extend .form__title;
+	}
+
+	.subscribeNotification__text {
+		width: percentage(957/1356);
+	}
+}
+
+.form--subscribe {
+	background-color: #222;
+	padding: 22px;
+	color: #fff;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	.form__title {
+		text-transform: uppercase;
+	}
+
+	.form__area {
+		width: percentage(957/1356);
+		position: relative;
+
+		input {
+			height: 52px;
+			border: 1px solid #fff;
+			background-color: transparent;
+			width: 100%;
+			color: #fff;
+			padding-left: 30px;
+
+			&::placeholder {
+				text-transform: uppercase;
+				color: #fff;
+			}
+		}
+
+		.btn--arrow {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			z-index: 2;
+			width: 65px;
+
+			svg {
+				width: 31px;
+				height: 22px;
+				fill: #fff;
+			}
+		}
+	}
+}

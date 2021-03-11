@@ -1,0 +1,11 @@
+.price--ruble {
+	font-family: $font-third;
+	text-transform: uppercase;
+
+	&:after {
+		content: '₽';
+		font-family: inherit;
+		font-size: inherit;
+		margin-left: 7px;
+	}
+}

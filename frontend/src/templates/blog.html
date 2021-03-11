@@ -1,0 +1,58 @@
+---
+title: Блог
+outClass:
+headerInner: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+<div class="section section--blog section--paddingTopDefault">
+   <div class="section__inner">
+       <div class="page__title">Блог</div>
+
+       <div class="article">
+           <div class="container">
+               <ul class="articleList">
+                   <li class="articleList__item articleList__item--lg">
+                        {{ mixins.cardArticle(title="Профессиональные блоки питания Critical", class="card--lg", img="img/blog/article_1.jpg") }}
+                   </li>
+                   <li class="articleList__item">
+                       {{ mixins.cardArticle(title="Как разнообразить длительный тату-сеанс", img="img/blog/article_2.jpg") }}
+                   </li>
+                   <li class="articleList__item">
+                       {{ mixins.cardArticle(title="Действительно ли ваша татуировка принадлежит вам?", img="img/blog/article_3.jpg") }}
+                   </li>
+                   <li class="articleList__item">
+                       {{ mixins.cardArticle(title="Топ-3 лучших средства для татуировки", img="img/blog/article_4.jpg") }}
+                   </li>
+
+               </ul>
+           </div>
+       </div>
+       {% include 'blocks/_subscribe.html' %}
+       <div class="article">
+           <div class="container">
+               <ul class="articleList">
+                   {% for item in range(0,3) %}
+                       <li class="articleList__item">
+                           {{ mixins.cardArticle(title="Как разнообразить длительный тату-сеанс", img="img/blog/article_2.jpg") }}
+                       </li>
+                       <li class="articleList__item">
+                           {{ mixins.cardArticle(title="Действительно ли ваша татуировка принадлежит вам?", img="img/blog/article_3.jpg") }}
+                       </li>
+                       <li class="articleList__item">
+                           {{ mixins.cardArticle(title="Топ-3 лучших средства для татуировки", img="img/blog/article_4.jpg") }}
+                       </li>
+                   {% endfor %}
+               </ul>
+           </div>
+       </div>
+
+       <div class="container">
+           {% include 'elements/_pagination.html' %}
+       </div>
+   </div>
+</div>
+
+{% endblock %}

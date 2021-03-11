@@ -1,0 +1,81 @@
+.locationBar {
+	background-color: #222;
+	color: #fff;
+	display: flex;
+	//justify-content: space-between;
+	padding: 10px 22px;
+
+	.locationBar__right,
+	.locationBar__left {
+		width: percentage(346/1420);
+	}
+
+	.locationBar__left {
+		padding: 14px 0;
+		border-right: 1px solid #fff;
+	}
+
+	.locationBar__center {
+		margin: 0 22px;
+		padding: 12px 0;
+		width: percentage(670/1420);
+	}
+
+	.locationBar__right {
+		margin-left: auto;
+		border-left: 1px solid #fff;
+		padding-left: 25px;
+		padding-top: 9px;
+	}
+
+	&__title {
+		font-family: $font-secondary;
+		font-size: 30px;
+		line-height: 45px;
+		letter-spacing: 0;
+	}
+
+	&__address {
+		font-size: 30px;
+		font-weight: 700;
+		letter-spacing: 0;
+		line-height: 45px;
+	}
+
+	&__info {
+		display: flex;
+		flex-flow: wrap;
+		margin-top: 40px;
+		text-transform: uppercase;
+
+		li {
+			width: 50%;
+		}
+
+		a {
+			color: #fff;
+
+			&:hover {
+				color: $primary-color;
+			}
+		}
+	}
+
+	p {
+		text-transform: uppercase;
+	}
+}
+
+
+.metroBox {
+	text-transform: uppercase;
+
+	&__body:not(:first-child) {
+		margin-top: 30px;
+	}
+}
+
+.locationMap {
+	height: 359px;
+	background-color: rgba($primary-color, .1);
+}

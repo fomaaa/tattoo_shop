@@ -1,0 +1,47 @@
+<footer class="footer">
+    <div class="containerFluid footer__inner">
+        <div class="footer__column footer__column--left">
+            <div class="footer__top">
+                <div class="copyright">
+                    <p>© 2017-2019 Tattoopro.ru</p>
+                    <p>Все права защищены.</p>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <a href="#" class="btn btn--arrowRight">
+                    <span>написать нам</span>
+                    {{ mixins.icon('arrow_right') }}
+                </a>
+            </div>
+        </div>
+        <div class="footer__column footer__column--center">
+            <nav class="nav nav--primary">
+                <ul class="menu js-splitter" data-columns="2">
+                    {% for item in ['о нас','обратная связь','политика конфиденциальности','возрат товара','доставка','карта сайта','сертификаты','закладки'] %}
+                        <li class="menu__item">
+                            <a href="#">{{ item }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </nav>
+        </div>
+        <div class="footer__column footer__column--right">
+            <ul class="socialsList">
+                <li class="socialsList__item">
+                    <a href="#" class="btn btn--arrowRight btn--arrowRightIcon">
+                        {{ mixins.icon('inst') }}
+                        <span>мы в инстаграме</span>
+                        {{ mixins.icon('arrow_right') }}
+                    </a>
+                </li>
+                <li class="socialsList__item">
+                    <a href="#" class="btn btn--arrowRight btn--arrowRightIcon">
+                        {{ mixins.icon('vk') }}
+                        <span>мы вконтакте</span>
+                        {{ mixins.icon('arrow_right') }}
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>

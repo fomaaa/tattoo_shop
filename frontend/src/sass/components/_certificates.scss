@@ -1,0 +1,54 @@
+.section--certificates {
+	padding-bottom: 95px;
+
+
+	.certificatesDescription {
+		max-width: 576px;
+		margin: 13px auto;
+
+		h1:not(:last-child) {
+			margin-bottom: 72px;
+		}
+
+		p {
+			font-size: 14px;
+			line-height: 21px;
+		}
+	}
+
+	.certificatesForm {
+		width: 100%;
+		max-width: 619px;
+		margin: 18px auto;
+	}
+}
+
+.certificatesCards {
+	display: flex;
+	justify-content: center;
+	flex-flow: wrap;
+	margin: -6px;
+
+	.certificatesCards__item {
+		margin: 6px;
+	}
+
+	&__row {
+		width: 100%;
+		display: flex;
+		flex-flow: wrap;
+		justify-content: space-between;
+	}
+
+	&__item {
+		height: 137px;
+		display: flex;
+		align-items: center;
+		border: 1px solid #000;
+		border-radius: 10px;
+		width: 220px;
+		padding: 20px;
+	}
+}
+
+

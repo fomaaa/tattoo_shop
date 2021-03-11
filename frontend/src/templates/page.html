@@ -1,0 +1,53 @@
+---
+title: Главная страница
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+    {% include 'blocks/_banner.html' %}
+    {% include 'blocks/_home-carousel.html' %}
+    {% include 'blocks/_catalogCards.html' %}
+    {% include 'blocks/_certificateOffer.html' %}
+
+    <div class="section section--instBox">
+        <div class="section__inner">
+            <div class="instBox">
+                <a href="https://instagram.com" target="_blank" class="instBox__line"></a>
+                <div class="instBox__body" id="instafeed"></div>
+                <a href="https://instagram.com" target="_blank" class="instBox__line"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section--blogCards">
+        <div class="section__inner">
+            <div class="section__title">Blog</div>
+
+            <div class="blogCards">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide blogCards__item">
+                            {{ mixins.cardBlog(title='Foxxx Irons. Тату порт approved', photo='img/blog_item.jpg') }}
+                        </div>
+                        <div class="swiper-slide blogCards__item">
+                            {{ mixins.cardBlog(title='Vladblad Irons', photo='img/blog_item.jpg') }}
+                        </div>
+                        <div class="swiper-slide blogCards__item">
+                            {{ mixins.cardBlog(title='Шаман. Тату порт approved', photo='img/blog_item.jpg') }}
+                        </div>
+                        <div class="swiper-slide blogCards__item">
+                            {{ mixins.cardBlog(title='Foxxx Irons. Тату порт approved', photo='img/blog_item.jpg') }}
+                        </div>
+                    </div>
+                    <div class="swiper-button swiper-button-prev"></div>
+                    <div class="swiper-button swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include 'blocks/_subscribe.html' %}
+    {% include 'blocks/_location.html' %}
+
+{% endblock %}

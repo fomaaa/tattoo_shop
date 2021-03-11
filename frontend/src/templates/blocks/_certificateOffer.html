@@ -1,0 +1,33 @@
+<div class="section section--certificateOffer">
+    <div class="container section__inner">
+        <div class="certificateOffer">
+            <div class="certificateOffer__head">
+                <div class="certificateOffer__title">Подарочные сертификаты</div>
+                <div class="certificateOffer__subtitle">на любую сумму</div>
+            </div>
+
+            <div class="certificateOffer__body">
+                <form action="/" class="form form--certificateOffer">
+                    <div class="form__top">
+                        {% for item in ['500','1 000','2 000','5 000'] %}
+                            <div class="radioButtonPrice">
+                                <input type="radio" class="radioButtonPrice__input"
+                                       name="radioButtonPrice">
+                                <div class="radioButtonPrice__body">
+                                    <span class="price price--ruble">{{ item }}</span>
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <input type="text" name="price" placeholder="или введите свою сумму" class="form__input">
+                    </div>
+                    <div class="form__bottom">
+                        <a href="#" class="btn btn--toCart">
+                            {{ mixins.icon('cart') }}
+                        </a>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,188 @@
+.completed {
+	//border: $border;
+	max-width: 800px;
+	text-align: center;
+	margin: 0 auto;
+	width: 100%;
+
+	@include r($xs-breakpoint) {
+		border: 0;
+	}
+
+	&__inner {
+		margin: 0 auto;
+		padding: 100px 0;
+
+		@include r($sm-breakpoint) {
+			padding: 60px 0;
+			//max-width: 360px;
+		}
+
+		@include r($xs-breakpoint) {
+			padding: 0;
+		}
+	}
+
+	.completed__icon,
+	.completed__title,
+	.completed__subtitle {
+		max-width: 390px;
+		margin-left: auto;
+		margin-right: auto;
+
+		@include r($sm-breakpoint) {
+			max-width: 360px;
+		}
+	}
+
+	&__icon {
+		margin-bottom: 37px;
+
+		@include r($sm-breakpoint) {
+			margin-bottom: 25px;
+		}
+
+		@include r($xs-breakpoint) {
+			margin-bottom: 15px;
+		}
+
+		img {
+			width: 125px;
+
+			@include r($xs-breakpoint) {
+				width: 60px;
+			}
+		}
+	}
+
+	&__title {
+
+		@include r($sm-breakpoint) {
+			margin: 0 auto;
+		}
+
+		@include r($xs-breakpoint) {
+
+			&.title-42 {
+				line-height: 30px;
+			}
+		}
+
+		span {
+			color: $primary-color;
+		}
+	}
+
+	&__subtitle {
+		margin-top: 35px;
+		//color: $gray;
+
+		@include r($sm-breakpoint) {
+			margin-top: 25px;
+
+			&.text-block {
+				font-size: 12px;
+				line-height: 20px;
+			}
+		}
+
+		@include r($xs-breakpoint) {
+			margin-top: 20px;
+
+			&.text-block {
+				font-size: 11px;
+				line-height: 15px;
+			}
+		}
+	}
+
+	&__bottom {
+		margin-top: 92px;
+		white-space: nowrap;
+
+		@include r($sm-breakpoint) {
+			margin-top: 55px;
+		}
+
+		@include r($xs-breakpoint) {
+			margin-top: 17px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-flow: wrap;
+			white-space: normal;
+		}
+
+		.title__desktop {
+			display: none;
+
+			@include rmin($xs-breakpoint) {
+				display: block;
+			}
+		}
+
+		.title__mobile {
+			display: none;
+
+			@include r($xs-breakpoint) {
+				display: block;
+			}
+		}
+
+		.btn {
+			vertical-align: middle;
+		}
+
+		.btn-success {
+
+			@include r($xs-breakpoint) {
+				padding: 18px 38px;
+			}
+		}
+
+		.btn:not(:first-child) {
+			margin-left: 40px;
+
+			@include r($xs-breakpoint) {
+				margin: 0 7.5px;
+			}
+		}
+
+		.btn {
+
+			@include r($xs-breakpoint) {
+				margin: 20px 7.5px;
+			}
+		}
+
+		.form {
+			display: inline-block;
+			vertical-align: middle;
+
+
+			&:not(:first-child) {
+				margin-left: 40px;
+
+				@include r($xs-breakpoint) {
+					margin: 0 7.5px;
+				}
+			}
+		}
+	}
+
+
+	&.completed--empty {
+		margin-top: 40px;
+
+		@include r($sm-breakpoint) {
+			margin-top: 80px;
+		}
+
+		.completed {
+
+			&__inner {
+				max-width: 455px;
+			}
+		}
+	}
+}

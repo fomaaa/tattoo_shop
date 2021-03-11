@@ -1,0 +1,33 @@
+.section--blog {
+	padding-bottom: 85px;
+
+	.page__title {
+		margin-bottom: 49px;
+	}
+
+	.pagination {
+		margin-top: 60px;
+	}
+}
+
+.article + .section--subscribe {
+	margin-top: 28px;
+	margin-bottom: 40px;
+}
+
+.articleList {
+	display: flex;
+	flex-flow: wrap;
+	margin: 0 -10px -55px;
+
+	.articleList__item {
+		width: 33.33%;
+		padding: 0 10px;
+		margin-bottom: 55px;
+
+		&.articleList__item--lg {
+			width: 100%;
+			margin-bottom: 20px;
+		}
+	}
+}

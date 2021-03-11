@@ -1,0 +1,35 @@
+.section--advantages {
+	padding: 25px 0 50px;
+}
+
+.advantagesList {
+	display: flex;
+	flex-flow: wrap;
+	justify-content: center;
+	align-items: center;
+	margin: 0 -20px;
+
+	.advantagesList__item {
+		width: 25%;
+		padding: 0 20px;
+	}
+}
+
+.advantagesItem {
+	display: flex;
+	align-items: center;
+	padding-left: 100px;
+	position: relative;
+
+	.advantagesItem__icon {
+		width: 80px;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 0;
+	}
+
+	.advantagesItem__title {
+
+	}
+}

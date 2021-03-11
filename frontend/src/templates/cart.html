@@ -1,0 +1,144 @@
+---
+title: Корзина
+outClass:
+headerInner: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+    <div class="js-cartPage__content">
+        <div class="section section--cart section--paddingTopDefault">
+            <div class="containerFluid section__inner">
+                <div class="page__title">{{ title }}</div>
+                <div class="cart">
+                    <div class="cart__center">
+                        <div class="cartGoods">
+                            <form action="http://www.mocky.io/v2/5d1538ef2f00005200c4f6a5" class="form form--goods">
+                                <ul class="goodsList">
+                                    {% for item in range(0,6) %}
+                                        <li class="goodsList__item">
+                                            <div class="card card--cart">
+                                                <div class="card__photo"
+                                                     style="background-image: url(img/carousel/good_item1.jpg);"></div>
+                                                <div class="card__body">
+                                                    <a href="#" class="card__title">Foxxx HANDPOKE Pen Steel</a>
+                                                    <div class="card__right">
+                                                        <div class="card__quantity">
+                                                            <div class="quantity">
+                                                                <div class="quantity__control quantity__control--minus minus">
+                                                                    {{ mixins.icon('minus') }}
+                                                                </div>
+                                                                <input type="text" class="quantity__value"
+                                                                       name="CartForm[products][92{{ loop.index }}][count]"
+                                                                       value="1"/>
+                                                                <div class="quantity__control quantity__control--plus plus">
+                                                                    {{ mixins.icon('plus') }}
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card__price">
+                                                            <span class="price price--ruble">2 500</span>
+                                                        </div>
+
+                                                        <button class="btn btn--remove" type="button">
+                                                            {{ mixins.icon('close') }}
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </form>
+                        </div>
+
+                        <div class="cartBottom">
+                            <a href="#" class="btn btn--primary btn--lg">Перейти к оформлению</a>
+                        </div>
+                    </div>
+                    <div class="cart__right">
+                        {% include 'blocks/_cartBox.html' %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="js-cartPage__empty hidden">
+        <div class="section section--cart section--paddingTopDefault">
+            <div class="containerFluid section__inner">
+                <div class="completed completed--empty">
+                    <div class="completed__inner">
+                        <div class="completed__icon">
+                            <img src="img/completed.svg" alt="" />
+                        </div>
+                        <div class="completed__title page__title">
+                            К сожалению, ваша
+                            корзина пуста
+                        </div>
+                        <div class="completed__subtitle">
+                            Посмотрите товары в каталоге или воспользуйтесь поиском
+                        </div>
+
+                        <div class="completed__bottom">
+                            <a href="#" class="btn btn--primary btn--lg">
+                                <span>перейти в каталог</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="section section--carousel">
+        <div class="containerFluid section__inner">
+            <div class="page__title">
+                Популярные товары
+            </div>
+            <div class="carouselBody">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        {% for item in range(0,2) %}
+                            <div class="swiper-slide">
+                                {{ mixins.cardGood(title="Блок питания Foxxx Irons Жук White Storm",
+                                    photo="img/carousel/good_item1.jpg",
+                                    photo2x="img/carousel/good_item1@2x.jpg 2x",
+                                    price="4 500") }}
+                            </div>
+                            <div class="swiper-slide">
+                                {{ mixins.cardGood(title="Блок питания Foxxx Irons Жук White Storm",
+                                    photo="img/carousel/good_item1.jpg",
+                                    photo2x="img/carousel/good_item1@2x.jpg 2x",
+                                    price="4 500") }}
+                            </div>
+                            <div class="swiper-slide">
+                                {{ mixins.cardGood(title="Блок питания Foxxx Irons Жук White Storm",
+                                    photo="img/carousel/good_item1.jpg",
+                                    photo2x="img/carousel/good_item1@2x.jpg 2x",
+                                    price="4 500") }}
+                            </div>
+                            <div class="swiper-slide">
+                                {{ mixins.cardGood(title="Foxxx HANDPOKE Pen Steel",
+                                    photo="img/carousel/good_item1.jpg",
+                                    photo2x="img/carousel/good_item1@2x.jpg 2x",
+                                    price="2 500") }}
+                            </div>
+                            <div class="swiper-slide">
+                                {{ mixins.cardGood(title="Foxxx HANDPOKE Pen Steel",
+                                    photo="img/carousel/good_item1.jpg",
+                                    photo2x="img/carousel/good_item1@2x.jpg 2x",
+                                    price="2 500") }}
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="swiper-button swiper-button-prev"></div>
+                    <div class="swiper-button swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

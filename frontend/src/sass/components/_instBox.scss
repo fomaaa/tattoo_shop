@@ -1,0 +1,25 @@
+.instBox {
+	&__line {
+		background-color: #222;
+		height: 71px;
+		background-image: url('../img/inst_line.png');
+		background-repeat: repeat-x;
+		display: block;
+	}
+
+	&__body {
+		//background-color: rgba($primary-color, .1);
+		display: flex;
+	}
+
+	.instBox__item {
+		width: 20%;
+
+		img {
+			display: block;
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+}

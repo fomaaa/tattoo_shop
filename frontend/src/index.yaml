@@ -1,0 +1,53 @@
+ProjectTitle: tattoopro
+
+PageList:
+- file: page.html
+  ready: 50
+
+- file: catalog-category.html
+  ready: 50
+- file: catalog-item.html
+  ready: 50
+- file: cart.html
+  ready: 50
+- file: cart-empty.html
+  ready: 50
+- file: cart-order.html
+  ready: 50
+
+- file: blog.html
+  ready: 50
+- file: blog-article.html
+  ready: 50
+
+- file: login.html
+  ready: 50
+- file: registration.html
+  ready: 50
+
+- file: account-info.html
+  ready: 50
+- file: account-change-password.html
+  ready: 50
+- file: account-history-orders.html
+  ready: 50
+- file: account-history-orders-empty.html
+  ready: 50
+- file: favorites.html
+  ready: 50
+
+- file: search.html
+  ready: 50
+- file: search-empty.html
+  ready: 50
+
+- file: static-page_delivery.html
+  ready: 50
+- file: static-page_payment.html
+  ready: 50
+- file: contacts.html
+  ready: 50
+- file: certificates.html
+  ready: 50
+- file: card-clients.html
+  ready: 50
